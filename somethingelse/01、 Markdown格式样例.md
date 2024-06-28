@@ -1,16 +1,84 @@
+# Markdown 使用文档
+
+## 1. 介绍
+   - 什么是Markdown？
+   - Markdown 的优点和用途
+   - Markdown 的历史和发展
+
+## 2. 基本语法
+   - 标题
+   - 段落和换行
+   - 粗体和斜体
+   - 列表
+     - 有序列表
+     - 无序列表
+     - 嵌套列表
+   - 引用块（Blockquotes）
+   - 分隔线
+
+## 3. 链接与图片
+   - 插入链接
+     - 内部链接
+     - 外部链接
+   - 锚点链接
+   - 插入图片
+     - 图片链接
+     - 图片属性设置
+
+## 4. 表格
+   - 创建表格
+   - 表格对齐和格式化
+   - 表头和内容单元格
+   - 表格的合并和拆分
+
+## 5. 代码块与语法高亮
+   - 插入行内代码
+   - 插入代码块
+     - 语法高亮显示
+     - 代码块的行号显示
+
+## 6. 扩展语法
+   - 任务列表
+   - 删除线
+   - 脚注
+   - 表情符号（Emoji）
+   - 注释
+
+## 7. 高级技巧
+   - 数学公式（LaTeX）
+   - 自动编号
+   - 自动生成目录
+   - 嵌入HTML和其他格式
+   - 多语言支持
+
+## 8. 编辑器与工具
+   - 推荐Markdown编辑器
+   - 插件与扩展
+
+## 9. Markdown 与其他格式的比较
+   - Markdown 与HTML的区别
+   - Markdown 与其他标记语言的比较
+
+## 10. 常见问题与注意事项
+
+## 11. 资源与进阶阅读
+
+## 12. 总结
+
+
 这是`什么效果`呢？
 
 <div style="background-color: Yellow; padding: 10px 0px; border: 1px solid black;">
   <h2 style="text-align: left; margin: 0; padding: 0;">自己调试版本（lambda表达式中参数使用引用）</h2>
 </div>
 
----
+<hr style="border-top: 5px solid #00FA9A;">
 
 <div style="background-color: Yellow; padding: 0px; border: 1px solid black;">
   <h2 style="text-align: left;">自己调试版本（lambda表达式中参数使用引用）</h2>
 </div>
 
----
+<hr style="border-top: 5px solid #DC143C;">
 
 <table>
   <tr>
@@ -420,284 +488,145 @@ $$
 </details>
 
 
-| 颜色名           | 十六进制颜色值 | 颜色              |
-|-----------------|----------------|-------------------|
-| <span style="color:#F0F8FF">AliceBlue</span>       | <span style="color:#F0F8FF">#F0F8FF</span>        | rgb(240, 248, 255) |
-| <span style="color:#FAEBD7">AntiqueWhite</span>    | <span style="color:#FAEBD7">#FAEBD7</span>        | rgb(250, 235, 215) |
-| <span style="color:#00FFFF">Aqua</span>            | <span style="color:#00FFFF">#00FFFF</span>        | rgb(0, 255, 255)   |
-| <span style="color:#7FFFD4">Aquamarine</span>      | <span style="color:#7FFFD4">#7FFFD4</span>        | rgb(127, 255, 212) |
-| <span style="color:#F0FFFF">Azure</span>           | <span style="color:#F0FFFF">#F0FFFF</span>        | rgb(240, 255, 255) |
-| <span style="color:#F5F5DC">Beige</span>           | <span style="color:#F5F5DC">#F5F5DC</span>        | rgb(245, 245, 220) |
-| <span style="color:#FFE4C4">Bisque</span>          | <span style="color:#FFE4C4">#FFE4C4</span>        | rgb(255, 228, 196) |
-| <span style="color:#000000">Black</span>           | <span style="color:#000000">#000000</span>        | rgb(0, 0, 0)       |
-| <span style="color:#FFEBCD">BlanchedAlmond</span>  | <span style="color:#FFEBCD">#FFEBCD</span>        | rgb(255, 235, 205) |
-| <span style="color:#0000FF">Blue</span>            | <span style="color:#0000FF">#0000FF</span>        | rgb(0, 0, 255)     |
-| <span style="color:#8A2BE2">BlueViolet</span>      | <span style="color:#8A2BE2">#8A2BE2</span>        | rgb(138, 43, 226)  |
-| <span style="color:#A52A2A">Brown</span>           | <span style="color:#A52A2A">#A52A2A</span>        | rgb(165, 42, 42)   |
-| <span style="color:#DEB887">BurlyWood</span>       | <span style="color:#DEB887">#DEB887</span>        | rgb(222, 184, 135) |
-| <span style="color:#5F9EA0">CadetBlue</span>       | <span style="color:#5F9EA0">#5F9EA0</span>        | rgb(95, 158, 160)  |
-| <span style="color:#7FFF00">Chartreuse</span>      | <span style="color:#7FFF00">#7FFF00</span>        | rgb(127, 255, 0)   |
-| <span style="color:#D2691E">Chocolate</span>       | <span style="color:#D2691E">#D2691E</span>        | rgb(210, 105, 30)  |
-| <span style="color:#FF7F50">Coral</span>           | <span style="color:#FF7F50">#FF7F50</span>        | rgb(255, 127, 80)  |
-| <span style="color:#6495ED">CornflowerBlue</span>  | <span style="color:#6495ED">#6495ED</span>        | rgb(100, 149, 237) |
-| <span style="color:#FFF8DC">Cornsilk</span>        | <span style="color:#FFF8DC">#FFF8DC</span>        | rgb(255, 248, 220) |
-| <span style="color:#DC143C">Crimson</span>         | <span style="color:#DC143C">#DC143C</span>        | rgb(220, 20, 60)   |
-| <span style="color:#00FFFF">Cyan</span>            | <span style="color:#00FFFF">#00FFFF</span>        | rgb(0, 255, 255)   |
-| <span style="color:#00008B">DarkBlue</span>        | <span style="color:#00008B">#00008B</span>        | rgb(0, 0, 139)     |
-| <span style="color:#008B8B">DarkCyan</span>        | <span style="color:#008B8B">#008B8B</span>        | rgb(0, 139, 139)   |
-| <span style="color:#B8860B">DarkGoldenRod</span>   | <span style="color:#B8860B">#B8860B</span>        | rgb(184, 134, 11)  |
-| <span style="color:#A9A9A9">DarkGray</span>        | <span style="color:#A9A9A9">#A9A9A9</span>        | rgb(169, 169, 169) |
-| <span style="color:#006400">DarkGreen</span>       | <span style="color:#006400">#006400</span>        | rgb(0, 100, 0)     |
-| <span style="color:#BDB76B">DarkKhaki</span>       | <span style="color:#BDB76B">#BDB76B</span>        | rgb(189, 183, 107) |
-| <span style="color:#8B008B">DarkMagenta</span>     | <span style="color:#8B008B">#8B008B</span>        | rgb(139, 0, 139)   |
-| <span style="color:#556B2F">DarkOliveGreen</span>  | <span style="color:#556B2F">#556B2F</span>        | rgb(85, 107, 47)   |
-| <span style="color:#FF8C00">Darkorange</span>      | <span style="color:#FF8C00">#FF8C00</span>        | rgb(255, 140, 0)   |
-| <span style="color:#9932CC">DarkOrchid</span>      | <span style="color:#9932CC">#9932CC</span>        | rgb(153, 50, 204)  |
-| <span style="color:#8B0000">DarkRed</span>         | <span style="color:#8B0000">#8B0000</span>        | rgb(139, 0, 0)     |
-| <span style="color:#E9967A">DarkSalmon</span>      | <span style="color:#E9967A">#E9967A</span>        | rgb(233, 150, 122) |
-| <span style="color:#8FBC8F">DarkSeaGreen</span>    | <span style="color:#8FBC8F">#8FBC8F</span>        | rgb(143, 188, 143) |
-| <span style="color:#483D8B">DarkSlateBlue</span>   | <span style="color:#483D8B">#483D8B</span>        | rgb(72, 61, 139)   |
-| <span style="color:#2F4F4F">DarkSlateGray</span>   | <span style="color:#2F4F4F">#2F4F4F</span>        | rgb(47, 79, 79)    |
-| <span style="color:#00CED1">DarkTurquoise</span>   | <span style="color:#00CED1">#00CED1</span>        | rgb(0, 206, 209)   |
-| <span style="color:#9400D3">DarkViolet</span>      | <span style="color:#9400D3">#9400D3</span>        | rgb(148, 0, 211)   |
-
-
-| 颜色名             | 十六进制颜色值 | 颜色              |
-|-------------------|----------------|-------------------|
-| <span style="color:#FF1493">DeepPink</span>        | <span style="color:#FF1493">#FF1493</span>        | rgb(255, 20, 147)  |
-| <span style="color:#00BFFF">DeepSkyBlue</span>     | <span style="color:#00BFFF">#00BFFF</span>        | rgb(0, 191, 255)   |
-| <span style="color:#696969">DimGray</span>         | <span style="color:#696969">#696969</span>        | rgb(105, 105, 105) |
-| <span style="color:#1E90FF">DodgerBlue</span>      | <span style="color:#1E90FF">#1E90FF</span>        | rgb(30, 144, 255)  |
-| <span style="color:#D19275">Feldspar</span>        | <span style="color:#D19275">#D19275</span>        | rgb(209, 146, 117) |
-| <span style="color:#B22222">FireBrick</span>       | <span style="color:#B22222">#B22222</span>        | rgb(178, 34, 34)   |
-| <span style="color:#FFFAF0">FloralWhite</span>     | <span style="color:#FFFAF0">#FFFAF0</span>        | rgb(255, 250, 240) |
-| <span style="color:#228B22">ForestGreen</span>     | <span style="color:#228B22">#228B22</span>        | rgb(34, 139, 34)   |
-| <span style="color:#FF00FF">Fuchsia</span>         | <span style="color:#FF00FF">#FF00FF</span>        | rgb(255, 0, 255)   |
-| <span style="color:#DCDCDC">Gainsboro</span>       | <span style="color:#DCDCDC">#DCDCDC</span>        | rgb(220, 220, 220) |
-| <span style="color:#F8F8FF">GhostWhite</span>      | <span style="color:#F8F8FF">#F8F8FF</span>        | rgb(248, 248, 255) |
-| <span style="color:#FFD700">Gold</span>            | <span style="color:#FFD700">#FFD700</span>        | rgb(255, 215, 0)   |
-| <span style="color:#DAA520">GoldenRod</span>       | <span style="color:#DAA520">#DAA520</span>        | rgb(218, 165, 32)  |
-| <span style="color:#808080">Gray</span>            | <span style="color:#808080">#808080</span>        | rgb(128, 128, 128) |
-| <span style="color:#008000">Green</span>           | <span style="color:#008000">#008000</span>        | rgb(0, 128, 0)     |
-| <span style="color:#ADFF2F">GreenYellow</span>     | <span style="color:#ADFF2F">#ADFF2F</span>        | rgb(173, 255, 47)  |
-| <span style="color:#F0FFF0">HoneyDew</span>        | <span style="color:#F0FFF0">#F0FFF0</span>        | rgb(240, 255, 240) |
-| <span style="color:#FF69B4">HotPink</span>         | <span style="color:#FF69B4">#FF69B4</span>        | rgb(255, 105, 180) |
-| <span style="color:#CD5C5C">IndianRed</span>       | <span style="color:#CD5C5C">#CD5C5C</span>        | rgb(205, 92, 92)   |
-| <span style="color:#4B0082">Indigo</span>          | <span style="color:#4B0082">#4B0082</span>        | rgb(75, 0, 130)    |
-| <span style="color:#FFFFF0">Ivory</span>           | <span style="color:#FFFFF0">#FFFFF0</span>        | rgb(255, 255, 240) |
-| <span style="color:#F0E68C">Khaki</span>           | <span style="color:#F0E68C">#F0E68C</span>        | rgb(240, 230, 140) |
-| <span style="color:#E6E6FA">Lavender</span>        | <span style="color:#E6E6FA">#E6E6FA</span>        | rgb(230, 230, 250) |
-| <span style="color:#FFF0F5">LavenderBlush</span>   | <span style="color:#FFF0F5">#FFF0F5</span>        | rgb(255, 240, 245) |
-| <span style="color:#7CFC00">LawnGreen</span>       | <span style="color:#7CFC00">#7CFC00</span>        | rgb(124, 252, 0)   |
-| <span style="color:#FFFACD">LemonChiffon</span>    | <span style="color:#FFFACD">#FFFACD</span>        | rgb(255, 250, 205) |
-| <span style="color:#ADD8E6">LightBlue</span>       | <span style="color:#ADD8E6">#ADD8E6</span>        | rgb(173, 216, 230) |
-| <span style="color:#F08080">LightCoral</span>      | <span style="color:#F08080">#F08080</span>        | rgb(240, 128, 128) |
-| <span style="color:#E0FFFF">LightCyan</span>       | <span style="color:#E0FFFF">#E0FFFF</span>        | rgb(224, 255, 255) |
-| <span style="color:#FAFAD2">LightGoldenRodYellow</span>| <span style="color:#FAFAD2">#FAFAD2</span>    | rgb(250, 250, 210) |
-| <span style="color:#D3D3D3">LightGrey</span>       | <span style="color:#D3D3D3">#D3D3D3</span>        | rgb(211, 211, 211) |
-| <span style="color:#90EE90">LightGreen</span>      | <span style="color:#90EE90">#90EE90</span>        | rgb(144, 238, 144) |
-| <span style="color:#FFB6C1">LightPink</span>       | <span style="color:#FFB6C1">#FFB6C1</span>        | rgb(255, 182, 193) |
-| <span style="color:#FFA07A">LightSalmon</span>     | <span style="color:#FFA07A">#FFA07A</span>        | rgb(255, 160, 122) |
-| <span style="color:#20B2AA">LightSeaGreen</span>   | <span style="color:#20B2AA">#20B2AA</span>        | rgb(32, 178, 170)  |
-| <span style="color:#87CEFA">LightSkyBlue</span>    | <span style="color:#87CEFA">#87CEFA</span>        | rgb(135, 206, 250) |
-| <span style="color:#8470FF">LightSlateBlue</span>  | <span style="color:#8470FF">#8470FF</span>        | rgb(132, 112, 255) |
-| <span style="color:#778899">LightSlateGray</span>  | <span style="color:#778899">#778899</span>        | rgb(119, 136, 153) |
-| <span style="color:#B0C4DE">LightSteelBlue</span>  | <span style="color:#B0C4DE">#B0C4DE</span>        | rgb(176, 196, 222) |
-
-| 颜色名                 | 十六进制颜色值   | 颜色                |
-|----------------------|----------------|---------------------|
-| <span style="color:#FFFFE0">LightYellow</span>     | <span style="color:#FFFFE0">#FFFFE0</span>        | rgb(255, 255, 224)  |
-| <span style="color:#00FF00">Lime</span>            | <span style="color:#00FF00">#00FF00</span>        | rgb(0, 255, 0)      |
-| <span style="color:#32CD32">LimeGreen</span>       | <span style="color:#32CD32">#32CD32</span>        | rgb(50, 205, 50)    |
-| <span style="color:#FAF0E6">Linen</span>           | <span style="color:#FAF0E6">#FAF0E6</span>        | rgb(250, 240, 230)  |
-| <span style="color:#FF00FF">Magenta</span>         | <span style="color:#FF00FF">#FF00FF</span>        | rgb(255, 0, 255)    |
-| <span style="color:#800000">Maroon</span>          | <span style="color:#800000">#800000</span>        | rgb(128, 0, 0)      |
-| <span style="color:#66CDAA">MediumAquaMarine</span>| <span style="color:#66CDAA">#66CDAA</span>        | rgb(102, 205, 170)  |
-| <span style="color:#0000CD">MediumBlue</span>      | <span style="color:#0000CD">#0000CD</span>        | rgb(0, 0, 205)      |
-| <span style="color:#BA55D3">MediumOrchid</span>    | <span style="color:#BA55D3">#BA55D3</span>        | rgb(186, 85, 211)   |
-| <span style="color:#9370DB">MediumPurple</span>    | <span style="color:#9370DB">#9370DB</span>        | rgb(147, 112, 219)  |
-| <span style="color:#3CB371">MediumSeaGreen</span>  | <span style="color:#3CB371">#3CB371</span>        | rgb(60, 179, 113)   |
-| <span style="color:#7B68EE">MediumSlateBlue</span> | <span style="color:#7B68EE">#7B68EE</span>        | rgb(123, 104, 238)  |
-| <span style="color:#00FA9A">MediumSpringGreen</span>| <span style="color:#00FA9A">#00FA9A</span>       | rgb(0, 250, 154)    |
-| <span style="color:#48D1CC">MediumTurquoise</span> | <span style="color:#48D1CC">#48D1CC</span>        | rgb(72, 209, 204)   |
-| <span style="color:#C71585">MediumVioletRed</span> | <span style="color:#C71585">#C71585</span>        | rgb(199, 21, 133)   |
-| <span style="color:#191970">MidnightBlue</span>    | <span style="color:#191970">#191970</span>        | rgb(25, 25, 112)    |
-| <span style="color:#F5FFFA">MintCream</span>       | <span style="color:#F5FFFA">#F5FFFA</span>        | rgb(245, 255, 250)  |
-| <span style="color:#FFE4E1">MistyRose</span>       | <span style="color:#FFE4E1">#FFE4E1</span>        | rgb(255, 228, 225)  |
-| <span style="color:#FFE4B5">Moccasin</span>        | <span style="color:#FFE4B5">#FFE4B5</span>        | rgb(255, 228, 181)  |
-| <span style="color:#FFDEAD">NavajoWhite</span>     | <span style="color:#FFDEAD">#FFDEAD</span>        | rgb(255, 222, 173)  |
-| <span style="color:#000080">Navy</span>            | <span style="color:#000080">#000080</span>        | rgb(0, 0, 128)      |
-| <span style="color:#FDF5E6">OldLace</span>         | <span style="color:#FDF5E6">#FDF5E6</span>        | rgb(253, 245, 230)  |
-| <span style="color:#808000">Olive</span>           | <span style="color:#808000">#808000</span>        | rgb(128, 128, 0)    |
-| <span style="color:#6B8E23">OliveDrab</span>       | <span style="color:#6B8E23">#6B8E23</span>        | rgb(107, 142, 35)   |
-| <span style="color:#FFA500">Orange</span>          | <span style="color:#FFA500">#FFA500</span>        | rgb(255, 165, 0)    |
-| <span style="color:#FF4500">OrangeRed</span>       | <span style="color:#FF4500">#FF4500</span>        | rgb(255, 69, 0)     |
-| <span style="color:#DA70D6">Orchid</span>          | <span style="color:#DA70D6">#DA70D6</span>        | rgb(218, 112, 214)  |
-| <span style="color:#EEE8AA">PaleGoldenRod</span>   | <span style="color:#EEE8AA">#EEE8AA</span>        | rgb(238, 232, 170)  |
-| <span style="color:#98FB98">PaleGreen</span>       | <span style="color:#98FB98">#98FB98</span>        | rgb(152, 251, 152)  |
-| <span style="color:#AFEEEE">PaleTurquoise</span>   | <span style="color:#AFEEEE">#AFEEEE</span>        | rgb(175, 238, 238)  |
-| <span style="color:#DB7093">PaleVioletRed</span>   | <span style="color:#DB7093">#DB7093</span>        | rgb(219, 112, 147)  |
-| <span style="color:#FFEFD5">PapayaWhip</span>      | <span style="color:#FFEFD5">#FFEFD5</span>        | rgb(255, 239, 213)  |
-| <span style="color:#FFDAB9">PeachPuff</span>       | <span style="color:#FFDAB9">#FFDAB9</span>        | rgb(255, 218, 185)  |
-| <span style="color:#CD853F">Peru</span>            | <span style="color:#CD853F">#CD853F</span>        | rgb(205, 133, 63)   |
-| <span style="color:#FFC0CB">Pink</span>            | <span style="color:#FFC0CB">#FFC0CB</span>        | rgb(255, 192, 203)  |
-| <span style="color:#DDA0DD">Plum</span>            | <span style="color:#DDA0DD">#DDA0DD</span>        | rgb(221, 160, 221)  |
-| <span style="color:#B0E0E6">PowderBlue</span>      | <span style="color:#B0E0E6">#B0E0E6</span>        | rgb(176, 224, 230)  |
-| <span style="color:#800080">Purple</span>          | <span style="color:#800080">#800080</span>        | rgb(128, 0, 128)    |
-| <span style="color:#FF0000">Red</span>             | <span style="color:#FF0000">#FF0000</span>        | rgb(255, 0, 0)      |
-
-
-| 颜色名                 | 十六进制颜色值   | 颜色                |
-|----------------------|----------------|---------------------|
-| <span style="color:#BC8F8F">RosyBrown</span>       | <span style="color:#BC8F8F">#BC8F8F</span>        | rgb(188, 143, 143)  |
-| <span style="color:#4169E1">RoyalBlue</span>       | <span style="color:#4169E1">#4169E1</span>        | rgb(65, 105, 225)   |
-| <span style="color:#8B4513">SaddleBrown</span>     | <span style="color:#8B4513">#8B4513</span>        | rgb(139, 69, 19)    |
-| <span style="color:#FA8072">Salmon</span>          | <span style="color:#FA8072">#FA8072</span>        | rgb(250, 128, 114)  |
-| <span style="color:#F4A460">SandyBrown</span>      | <span style="color:#F4A460">#F4A460</span>        | rgb(244, 164, 96)   |
-| <span style="color:#2E8B57">SeaGreen</span>        | <span style="color:#2E8B57">#2E8B57</span>        | rgb(46, 139, 87)    |
-| <span style="color:#FFF5EE">SeaShell</span>        | <span style="color:#FFF5EE">#FFF5EE</span>        | rgb(255, 245, 238)  |
-| <span style="color:#A0522D">Sienna</span>          | <span style="color:#A0522D">#A0522D</span>        | rgb(160, 82, 45)    |
-| <span style="color:#C0C0C0">Silver</span>          | <span style="color:#C0C0C0">#C0C0C0</span>        | rgb(192, 192, 192)  |
-| <span style="color:#87CEEB">SkyBlue</span>         | <span style="color:#87CEEB">#87CEEB</span>        | rgb(135, 206, 235)  |
-| <span style="color:#6A5ACD">SlateBlue</span>       | <span style="color:#6A5ACD">#6A5ACD</span>        | rgb(106, 90, 205)   |
-| <span style="color:#708090">SlateGray</span>       | <span style="color:#708090">#708090</span>        | rgb(112, 128, 144)  |
-| <span style="color:#FFFAFA">Snow</span>            | <span style="color:#FFFAFA">#FFFAFA</span>        | rgb(255, 250, 250)  |
-| <span style="color:#00FF7F">SpringGreen</span>     | <span style="color:#00FF7F">#00FF7F</span>        | rgb(0, 255, 127)    |
-| <span style="color:#4682B4">SteelBlue</span>       | <span style="color:#4682B4">#4682B4</span>        | rgb(70, 130, 180)   |
-| <span style="color:#D2B48C">Tan</span>             | <span style="color:#D2B48C">#D2B48C</span>        | rgb(210, 180, 140)  |
-| <span style="color:#008080">Teal</span>            | <span style="color:#008080">#008080</span>        | rgb(0, 128, 128)    |
-| <span style="color:#D8BFD8">Thistle</span>         | <span style="color:#D8BFD8">#D8BFD8</span>        | rgb(216, 191, 216)  |
-| <span style="color:#FF6347">Tomato</span>          | <span style="color:#FF6347">#FF6347</span>        | rgb(255, 99, 71)    |
-| <span style="color:#40E0D0">Turquoise</span>       | <span style="color:#40E0D0">#40E0D0</span>        | rgb(64, 224, 208)   |
-| <span style="color:#EE82EE">Violet</span>          | <span style="color:#EE82EE">#EE82EE</span>        | rgb(238, 130, 238)  |
-| <span style="color:#D02090">VioletRed</span>       | <span style="color:#D02090">#D02090</span>        | rgb(208, 32, 144)   |
-| <span style="color:#F5DEB3">Wheat</span>           | <span style="color:#F5DEB3">#F5DEB3</span>        | rgb(245, 222, 179)  |
-| <span style="color:#FFFFFF">White</span>           | <span style="color:#FFFFFF">#FFFFFF</span>        | rgb(255, 255, 255)  |
-| <span style="color:#F5F5F5">WhiteSmoke</span>      | <span style="color:#F5F5F5">#F5F5F5</span>        | rgb(245, 245, 245)  |
-| <span style="color:#FFFF00">Yellow</span>          | <span style="color:#FFFF00">#FFFF00</span>        | rgb(255, 255, 0)    |
-| <span style="color:#9ACD32">YellowGreen</span>     | <span style="color:#9ACD32">#9ACD32</span>        | rgb(154, 205, 50)   |
-
----
-
-
-`好的，我会按照您希望的顺序重新整理这些颜色数据。这里是第一部分，按照颜色的一般色相顺序分组`：
-
-| 颜色名               | 十六进制颜色值 | 颜色              |
-|---------------------|----------------|-------------------|
-| <span style="color:#8B0000">DarkRed</span>              | <span style="color:#8B0000">#8B0000</span>        | rgb(139, 0, 0)     |
-| <span style="color:#FF4500">OrangeRed</span>            | <span style="color:#FF4500">#FF4500</span>        | rgb(255, 69, 0)    |
-| <span style="color:#FF6347">Tomato</span>               | <span style="color:#FF6347">#FF6347</span>        | rgb(255, 99, 71)   |
-| <span style="color:#FF7F50">Coral</span>                | <span style="color:#FF7F50">#FF7F50</span>        | rgb(255, 127, 80)  |
-| <span style="color:#DC143C">Crimson</span>              | <span style="color:#DC143C">#DC143C</span>        | rgb(220, 20, 60)   |
-| <span style="color:#FF0000">Red</span>                  | <span style="color:#FF0000">#FF0000</span>        | rgb(255, 0, 0)     |
-| <span style="color:#B22222">FireBrick</span>            | <span style="color:#B22222">#B22222</span>        | rgb(178, 34, 34)   |
-| <span style="color:#A52A2A">Brown</span>                 | <span style="color:#A52A2A">#A52A2A</span>        | rgb(165, 42, 42)   |
-| <span style="color:#800000">Maroon</span>                | <span style="color:#800000">#800000</span>        | rgb(128, 0, 0)     |
-| <span style="color:#FF8C00">DarkOrange</span>            | <span style="color:#FF8C00">#FF8C00</span>        | rgb(255, 140, 0)   |
-| <span style="color:#FFA500">Orange</span>                | <span style="color:#FFA500">#FFA500</span>        | rgb(255, 165, 0)   |
-| <span style="color:#FFD700">Gold</span>                  | <span style="color:#FFD700">#FFD700</span>        | rgb(255, 215, 0)   |
-| <span style="color:#DAA520">GoldenRod</span>             | <span style="color:#DAA520">#DAA520</span>        | rgb(218, 165, 32)  |
-| <span style="color:#FFB6C1">LightPink</span>             | <span style="color:#FFB6C1">#FFB6C1</span>        | rgb(255, 182, 193) |
-| <span style="color:#FF69B4">HotPink</span>               | <span style="color:#FF69B4">#FF69B4</span>        | rgb(255, 105, 180) |
-| <span style="color:#FF1493">DeepPink</span>              | <span style="color:#FF1493">#FF1493</span>        | rgb(255, 20, 147)  |
-| <span style="color:#C71585">MediumVioletRed</span>       | <span style="color:#C71585">#C71585</span>        | rgb(199, 21, 133)  |
-| <span style="color:#DB7093">PaleVioletRed</span>         | <span style="color:#DB7093">#DB7093</span>        | rgb(219, 112, 147) |
-| <span style="color:#800080">Purple</span>                | <span style="color:#800080">#800080</span>        | rgb(128, 0, 128)   |
-| <span style="color:#BA55D3">MediumOrchid</span>          | <span style="color:#BA55D3">#BA55D3</span>        | rgb(186, 85, 211)  |
-| <span style="color:#9370DB">MediumPurple</span>          | <span style="color:#9370DB">#9370DB</span>        | rgb(147, 112, 219) |
-| <span style="color:#8A2BE2">BlueViolet</span>            | <span style="color:#8A2BE2">#8A2BE2</span>        | rgb(138, 43, 226)  |
-| <span style="color:#6A5ACD">SlateBlue</span>             | <span style="color:#6A5ACD">#6A5ACD</span>        | rgb(106, 90, 205)  |
-| <span style="color:#483D8B">DarkSlateBlue</span>         | <span style="color:#483D8B">#483D8B</span>        | rgb(72, 61, 139)   |
-| <span style="color:#4169E1">RoyalBlue</span>             | <span style="color:#4169E1">#4169E1</span>        | rgb(65, 105, 225)  |
-| <span style="color:#0000FF">Blue</span>                  | <span style="color:#0000FF">#0000FF</span>        | rgb(0, 0, 255)     |
-| <span style="color:#00008B">DarkBlue</span>              | <span style="color:#00008B">#00008B</span>        | rgb(0, 0, 139)     |
-| <span style="color:#000080">Navy</span>                  | <span style="color:#000080">#000080</span>        | rgb(0, 0, 128)     |
-| <span style="color:#4B0082">Indigo</span>                | <span style="color:#4B0082">#4B0082</span>        | rgb(75, 0, 130)    |
-| <span style="color:#6B8E23">OliveDrab</span>             | <span style="color:#6B8E23">#6B8E23</span>        | rgb(107, 142, 35)  |
-| <span style="color:#556B2F">DarkOliveGreen</span>        | <span style="color:#556B2F">#556B2F</span>        | rgb(85, 107, 47)   |
-| <span style="color:#8FBC8F">DarkSeaGreen</span>          | <span style="color:#8FBC8F">#8FBC8F</span>        | rgb(143, 188, 143) |
-| <span style="color:#2E8B57">SeaGreen</span>              | <span style="color:#2E8B57">#2E8B57</span>        | rgb(46, 139, 87)   |
-| <span style="color:#3CB371">MediumSeaGreen</span>        | <span style="color:#3CB371">#3CB371</span>        | rgb(60, 179, 113)  |
-| <span style="color:#20B2AA">LightSeaGreen</span>         | <span style="color:#20B2AA">#20B2AA</span>        | rgb(32, 178, 170)  |
-| <span style="color:#66CDAA">MediumAquamarine</span>      | <span style="color:#66CDAA">#66CDAA</span>        | rgb(102, 205, 170) |
-| <span style="color:#00CED1">DarkTurquoise</span>         | <span style="color:#00CED1">#00CED1</span>        | rgb(0, 206, 209)   |
-| <span style="color:#008B8B">DarkCyan</span>              | <span style="color:#008B8B">#008B8B</span>        | rgb(0, 139, 139)   |
-| <span style="color:#008080">Teal</span>                  | <span style="color:#008080">#008080</span>        | rgb(0, 128, 128)   |
-
-
-以下是第二部分颜色按照色号顺序排列的结果：
-
-| 颜色名               | 十六进制颜色值 | 颜色              |
-|---------------------|----------------|-------------------|
-| <span style="color:#00FFFF">Aqua</span>                  | <span style="color:#00FFFF">#00FFFF</span>        | rgb(0, 255, 255)   |
-| <span style="color:#00CED1">DarkTurquoise</span>         | <span style="color:#00CED1">#00CED1</span>        | rgb(0, 206, 209)   |
-| <span style="color:#20B2AA">LightSeaGreen</span>         | <span style="color:#20B2AA">#20B2AA</span>        | rgb(32, 178, 170)  |
-| <span style="color:#48D1CC">MediumTurquoise</span>       | <span style="color:#48D1CC">#48D1CC</span>        | rgb(72, 209, 204)  |
-| <span style="color:#40E0D0">Turquoise</span>             | <span style="color:#40E0D0">#40E0D0</span>        | rgb(64, 224, 208)  |
-| <span style="color:#7FFFD4">Aquamarine</span>            | <span style="color:#7FFFD4">#7FFFD4</span>        | rgb(127, 255, 212) |
-| <span style="color:#AFEEEE">PaleTurquoise</span>         | <span style="color:#AFEEEE">#AFEEEE</span>        | rgb(175, 238, 238) |
-| <span style="color:#E0FFFF">LightCyan</span>             | <span style="color:#E0FFFF">#E0FFFF</span>        | rgb(224, 255, 255) |
-| <span style="color:#5F9EA0">CadetBlue</span>             | <span style="color:#5F9EA0">#5F9EA0</span>        | rgb(95, 158, 160)  |
-| <span style="color:#B0E0E6">PowderBlue</span>            | <span style="color:#B0E0E6">#B0E0E6</span>        | rgb(176, 224, 230) |
-| <span style="color:#ADD8E6">LightBlue</span>             | <span style="color:#ADD8E6">#ADD8E6</span>        | rgb(173, 216, 230) |
-| <span style="color:#87CEEB">SkyBlue</span>               | <span style="color:#87CEEB">#87CEEB</span>        | rgb(135, 206, 235) |
-| <span style="color:#87CEFA">LightSkyBlue</span>          | <span style="color:#87CEFA">#87CEFA</span>        | rgb(135, 206, 250) |
-| <span style="color:#00BFFF">DeepSkyBlue</span>           | <span style="color:#00BFFF">#00BFFF</span>        | rgb(0, 191, 255)   |
-| <span style="color:#1E90FF">DodgerBlue</span>            | <span style="color:#1E90FF">#1E90FF</span>        | rgb(30, 144, 255)  |
-| <span style="color:#6495ED">CornflowerBlue</span>        | <span style="color:#6495ED">#6495ED</span>        | rgb(100, 149, 237) |
-| <span style="color:#4682B4">SteelBlue</span>             | <span style="color:#4682B4">#4682B4</span>        | rgb(70, 130, 180)  |
-| <span style="color:#4169E1">RoyalBlue</span>             | <span style="color:#4169E1">#4169E1</span>        | rgb(65, 105, 225)  |
-| <span style="color:#0000FF">Blue</span>                  | <span style="color:#0000FF">#0000FF</span>        | rgb(0, 0, 255)     |
-| <span style="color:#00008B">DarkBlue</span>              | <span style="color:#00008B">#00008B</span>        | rgb(0, 0, 139)     |
-| <span style="color:#000080">Navy</span>                  | <span style="color:#000080">#000080</span>        | rgb(0, 0, 128)     |
-| <span style="color:#191970">MidnightBlue</span>          | <span style="color:#191970">#191970</span>        | rgb(25, 25, 112)   |
-
-这些颜色按照蓝色和青色系的色相顺序排列。接下来会继续给您第三部分的数据。    
-
-
-
----
-
-
-| 颜色名                                   | 十六进制颜色值                             | 颜色                |
-|----------------------------------------|----------------------------------------|---------------------|
-| <span style="color:#006400">DarkGreen</span>                | <span style="color:#006400">#006400</span>              | rgb(0, 100, 0)      |
-| <span style="color:#008000">Green</span>                    | <span style="color:#008000">#008000</span>              | rgb(0, 128, 0)      |
-| <span style="color:#228B22">ForestGreen</span>              | <span style="color:#228B22">#228B22</span>              | rgb(34, 139, 34)    |
-| <span style="color:#32CD32">LimeGreen</span>                | <span style="color:#32CD32">#32CD32</span>              | rgb(50, 205, 50)    |
-| <span style="color:#9ACD32">YellowGreen</span>              | <span style="color:#9ACD32">#9ACD32</span>              | rgb(154, 205, 50)   |
-| <span style="color:#ADFF2F">GreenYellow</span>              | <span style="color:#ADFF2F">#ADFF2F</span>              | rgb(173, 255, 47)   |
-| <span style="color:#7FFF00">Chartreuse</span>               | <span style="color:#7FFF00">#7FFF00</span>              | rgb(127, 255, 0)    |
-| <span style="color:#00FF00">Lime</span>                     | <span style="color:#00FF00">#00FF00</span>              | rgb(0, 255, 0)      |
-| <span style="color:#7CFC00">LawnGreen</span>                | <span style="color:#7CFC00">#7CFC00</span>              | rgb(124, 252, 0)    |
-| <span style="color:#00FA9A">MediumSpringGreen</span>        | <span style="color:#00FA9A">#00FA9A</span>              | rgb(0, 250, 154)    |
-| <span style="color:#00FF7F">SpringGreen</span>              | <span style="color:#00FF7F">#00FF7F</span>              | rgb(0, 255, 127)    |
-| <span style="color:#98FB98">PaleGreen</span>                | <span style="color:#98FB98">#98FB98</span>              | rgb(152, 251, 152)  |
-| <span style="color:#90EE90">LightGreen</span>               | <span style="color:#90EE90">#90EE90</span>              | rgb(144, 238, 144)  |
-| <span style="color:#8FBC8F">DarkSeaGreen</span>             | <span style="color:#8FBC8F">#8FBC8F</span>              | rgb(143, 188, 143)  |
-| <span style="color:#3CB371">MediumSeaGreen</span>           | <span style="color:#3CB371">#3CB371</span>              | rgb(60, 179, 113)   |
-| <span style="color:#2E8B57">SeaGreen</span>                 | <span style="color:#2E8B57">#2E8B57</span>              | rgb(46, 139, 87)    |
-| <span style="color:#66CDAA">MediumAquaMarine</span>         | <span style="color:#66CDAA">#66CDAA</span>              | rgb(102, 205, 170)  |
-| <span style="color:#20B2AA">LightSeaGreen</span>            | <span style="color:#20B2AA">#20B2AA</span>              | rgb(32, 178, 170)   |
-| <span style="color:#008B8B">DarkCyan</span>                 | <span style="color:#008B8B">#008B8B</span>              | rgb(0, 139, 139)    |
-| <span style="color:#008080">Teal</span>                     | <span style="color:#008080">#008080</span>              | rgb(0, 128, 128)    |
-| <span style="color:#00FFFF">Aqua</span>                     | <span style="color:#00FFFF">#00FFFF</span>              | rgb(0, 255, 255)    |
-| <span style="color:#00FFFF">Cyan</span>                     | <span style="color:#00FFFF">#00FFFF</span>              | rgb(0, 255, 255)    |
-| <span style="color:#E0FFFF">LightCyan</span>                | <span style="color:#E0FFFF">#E0FFFF</span>              | rgb(224, 255, 255)  |
-| <span style="color:#AFEEEE">PaleTurquoise</span>            | <span style="color:#AFEEEE">#AFEEEE</span>              | rgb(175, 238, 238)  |
-| <span style="color:#7FFFD4">Aquamarine</span>               | <span style="color:#7FFFD4">#7FFFD4</span>              | rgb(127, 255, 212)  |
-| <span style="color:#40E0D0">Turquoise</span>                | <span style="color:#40E0D0">#40E0D0</span>              | rgb(64, 224, 208)   |
-| <span style="color:#48D1CC">MediumTurquoise</span>          | <span style="color:#48D1CC">#48D1CC</span>              | rgb(72, 209, 204)   |
-| <span style="color:#00CED1">DarkTurquoise</span>            | <span style="color:#00CED1">#00CED1</span>              | rgb(0, 206, 209)    |
-| <span style="color:#5F9EA0">CadetBlue</span>                | <span style="color:#5F9EA0">#5F9EA0</span>              | rgb(95, 158, 160)   |
-| <span style="color:#4682B4">SteelBlue</span>                | <span style="color:#4682B4">#4682B4</span>              | rgb(70, 130, 180)   |
-| <span style="color:#6495ED">CornflowerBlue</span>           | <span style="color:#6495ED">#6495ED</span>              | rgb(100, 149, 237)  |
-| <span style="color:#00BFFF">DeepSkyBlue</span>              | <span style="color:#00BFFF">#00BFFF</span>              | rgb(0, 191, 255)    |
-| <span style="color:#1E90FF">DodgerBlue</span>               | <span style="color:#1E90FF">#1E90FF</span>              | rgb(30, 144, 255)   |
-| <span style="color:#87CEFA">LightSkyBlue</span>             | <span style="color:#87CEFA">#87CEFA</span>              | rgb(135, 206, 250)  |
-| <span style="color:#87CEEB">SkyBlue</span>                  | <span style="color:#87CEEB">#87CEEB</span>              | rgb(135, 206, 235)  |
-| <span style="color:#ADD8E6">LightBlue</span>                | <span style="color:#ADD8E6">#ADD8E6</span>              | rgb(173, 216, 230)  |
-| <span style="color:#B0E0E6">PowderBlue</span>               | <span style="color:#B0E0E6">#B0E0E6</span>              | rgb(176, 224, 230)  |
-
-
-
+| 颜色名称 | 十六进制 | RGB值 |
+| --- | --- | --- |
+| <span style="color:#F08080">LightCoral</span> | <span style="color:#F08080">#F08080</span> | rgb(240, 128, 128) |
+| <span style="color:#FA8072">Salmon</span> | <span style="color:#FA8072">#FA8072</span> | rgb(250, 128, 114) |
+| <span style="color:#E9967A">DarkSalmon</span> | <span style="color:#E9967A">#E9967A</span> | rgb(233, 150, 122) |
+| <span style="color:#FFA07A">LightSalmon</span> | <span style="color:#FFA07A">#FFA07A</span> | rgb(255, 160, 122) |
+| <span style="color:#FF7F50">Coral</span> | <span style="color:#FF7F50">#FF7F50</span> | rgb(255, 127, 80) |
+| <span style="color:#FF6347">Tomato</span> | <span style="color:#FF6347">#FF6347</span> | rgb(255, 99, 71) |
+| <span style="color:#FF4500">OrangeRed</span> | <span style="color:#FF4500">#FF4500</span> | rgb(255, 69, 0) |
+| <span style="color:#FF0000">Red</span> | <span style="color:#FF0000">#FF0000</span> | rgb(255, 0, 0) |
+| <span style="color:#DC143C">Crimson</span> | <span style="color:#DC143C">#DC143C</span> | rgb(220, 20, 60) |
+| <span style="color:#B22222">FireBrick</span> | <span style="color:#B22222">#B22222</span> | rgb(178, 34, 34) |
+| <span style="color:#8B0000">DarkRed</span> | <span style="color:#8B0000">#8B0000</span> | rgb(139, 0, 0) |
+| <span style="color:#CD5C5C">IndianRed</span> | <span style="color:#CD5C5C">#CD5C5C</span> | rgb(205, 92, 92) |
+| <span style="color:#FF8C00">Darkorange</span> | <span style="color:#FF8C00">#FF8C00</span> | rgb(255, 140, 0) |
+| <span style="color:#FFA500">Orange</span> | <span style="color:#FFA500">#FFA500</span> | rgb(255, 165, 0) |
+| <span style="color:#FFDAB9">PeachPuff</span> | <span style="color:#FFDAB9">#FFDAB9</span> | rgb(255, 218, 185) |
+| <span style="color:#FFE4B5">Moccasin</span> | <span style="color:#FFE4B5">#FFE4B5</span> | rgb(255, 228, 181) |
+| <span style="color:#FFEFD5">PapayaWhip</span> | <span style="color:#FFEFD5">#FFEFD5</span> | rgb(255, 239, 213) |
+| <span style="color:#FFFFE0">LightYellow</span> | <span style="color:#FFFFE0">#FFFFE0</span> | rgb(255, 255, 224) |
+| <span style="color:#FFFACD">LemonChiffon</span> | <span style="color:#FFFACD">#FFFACD</span> | rgb(255, 250, 205) |
+| <span style="color:#FAFAD2">LightGoldenRodYellow</span> | <span style="color:#FAFAD2">#FAFAD2</span> | rgb(250, 250, 210) |
+| <span style="color:#FFEFD5">PapayaWhip</span> | <span style="color:#FFEFD5">#FFEFD5</span> | rgb(255, 239, 213) |
+| <span style="color:#FFE4B5">Moccasin</span> | <span style="color:#FFE4B5">#FFE4B5</span> | rgb(255, 228, 181) |
+| <span style="color:#FFDAB9">PeachPuff</span> | <span style="color:#FFDAB9">#FFDAB9</span> | rgb(255, 218, 185) |
+| <span style="color:#EEE8AA">PaleGoldenRod</span> | <span style="color:#EEE8AA">#EEE8AA</span> | rgb(238, 232, 170) |
+| <span style="color:#F0E68C">Khaki</span> | <span style="color:#F0E68C">#F0E68C</span> | rgb(240, 230, 140) |
+| <span style="color:#BDB76B">DarkKhaki</span> | <span style="color:#BDB76B">#BDB76B</span> | rgb(189, 183, 107) |
+| <span style="color:#FFFF00">Yellow</span> | <span style="color:#FFFF00">#FFFF00</span> | rgb(255, 255, 0) |
+| <span style="color:#FFD700">Gold</span> | <span style="color:#FFD700">#FFD700</span> | rgb(255, 215, 0) |
+| <span style="color:#FFA500">Orange</span> | <span style="color:#FFA500">#FFA500</span> | rgb(255, 165, 0) |
+| <span style="color:#FF8C00">Darkorange</span> | <span style="color:#FF8C00">#FF8C00</span> | rgb(255, 140, 0) |
+| <span style="color:#DAA520">GoldenRod</span> | <span style="color:#DAA520">#DAA520</span> | rgb(218, 165, 32) |
+| <span style="color:#B8860B">DarkGoldenRod</span> | <span style="color:#B8860B">#B8860B</span> | rgb(184, 134, 11) |
+| <span style="color:#ADFF2F">GreenYellow</span> | <span style="color:#ADFF2F">#ADFF2F</span> | rgb(173, 255, 47) |
+| <span style="color:#7FFF00">Chartreuse</span> | <span style="color:#7FFF00">#7FFF00</span> | rgb(127, 255, 0) |
+| <span style="color:#7CFC00">LawnGreen</span> | <span style="color:#7CFC00">#7CFC00</span> | rgb(124, 252, 0) |
+| <span style="color:#00FF00">Lime</span> | <span style="color:#00FF00">#00FF00</span> | rgb(0, 255, 0) |
+| <span style="color:#32CD32">LimeGreen</span> | <span style="color:#32CD32">#32CD32</span> | rgb(50, 205, 50) |
+| <span style="color:#98FB98">PaleGreen</span> | <span style="color:#98FB98">#98FB98</span> | rgb(152, 251, 152) |
+| <span style="color:#90EE90">LightGreen</span> | <span style="color:#90EE90">#90EE90</span> | rgb(144, 238, 144) |
+| <span style="color:#00FA9A">MediumSpringGreen</span> | <span style="color:#00FA9A">#00FA9A</span> | rgb(0, 250, 154) |
+| <span style="color:#00FF7F">SpringGreen</span> | <span style="color:#00FF7F">#00FF7F</span> | rgb(0, 255, 127) |
+| <span style="color:#3CB371">MediumSeaGreen</span> | <span style="color:#3CB371">#3CB371</span> | rgb(60, 179, 113) |
+| <span style="color:#2E8B57">SeaGreen</span> | <span style="color:#2E8B57">#2E8B57</span> | rgb(46, 139, 87) |
+| <span style="color:#228B22">ForestGreen</span> | <span style="color:#228B22">#228B22</span> | rgb(34, 139, 34) |
+| <span style="color:#008000">Green</span> | <span style="color:#008000">#008000</span> | rgb(0, 128, 0) |
+| <span style="color:#006400">DarkGreen</span> | <span style="color:#006400">#006400</span> | rgb(0, 100, 0) |
+| <span style="color:#9ACD32">YellowGreen</span> | <span style="color:#9ACD32">#9ACD32</span> | rgb(154, 205, 50) |
+| <span style="color:#6B8E23">OliveDrab</span> | <span style="color:#6B8E23">#6B8E23</span> | rgb(107, 142, 35) |
+| <span style="color:#E0FFFF">LightCyan</span> | <span style="color:#E0FFFF">#E0FFFF</span> | rgb(224, 255, 255) |
+| <span style="color:#00FFFF">Cyan</span> | <span style="color:#00FFFF">#00FFFF</span> | rgb(0, 255, 255) |
+| <span style="color:#00FFFF">Aqua</span> | <span style="color:#00FFFF">#00FFFF</span> | rgb(0, 255, 255) |
+| <span style="color:#7FFFD4">Aquamarine</span> | <span style="color:#7FFFD4">#7FFFD4</span> | rgb(127, 255, 212) |
+| <span style="color:#40E0D0">Turquoise</span> | <span style="color:#40E0D0">#40E0D0</span> | rgb(64, 224, 208) |
+| <span style="color:#48D1CC">MediumTurquoise</span> | <span style="color:#48D1CC">#48D1CC</span> | rgb(72, 209, 204) |
+| <span style="color:#00CED1">DarkTurquoise</span> | <span style="color:#00CED1">#00CED1</span> | rgb(0, 206, 209) |
+| <span style="color:#5F9EA0">CadetBlue</span> | <span style="color:#5F9EA0">#5F9EA0</span> | rgb(95, 158, 160) |
+| <span style="color:#ADD8E6">LightBlue</span> | <span style="color:#ADD8E6">#ADD8E6</span> | rgb(173, 216, 230) |
+| <span style="color:#B0E0E6">PowderBlue</span> | <span style="color:#B0E0E6">#B0E0E6</span> | rgb(176, 224, 230) |
+| <span style="color:#87CEFA">LightSkyBlue</span> | <span style="color:#87CEFA">#87CEFA</span> | rgb(135, 206, 250) |
+| <span style="color:#87CEEB">SkyBlue</span> | <span style="color:#87CEEB">#87CEEB</span> | rgb(135, 206, 235) |
+| <span style="color:#00BFFF">DeepSkyBlue</span> | <span style="color:#00BFFF">#00BFFF</span> | rgb(0, 191, 255) |
+| <span style="color:#1E90FF">DodgerBlue</span> | <span style="color:#1E90FF">#1E90FF</span> | rgb(30, 144, 255) |
+| <span style="color:#6495ED">CornflowerBlue</span> | <span style="color:#6495ED">#6495ED</span> | rgb(100, 149, 237) |
+| <span style="color:#4682B4">SteelBlue</span> | <span style="color:#4682B4">#4682B4</span> | rgb(70, 130, 180) |
+| <span style="color:#B0C4DE">LightSteelBlue</span> | <span style="color:#B0C4DE">#B0C4DE</span> | rgb(176, 196, 222) |
+| <span style="color:#4169E1">RoyalBlue</span> | <span style="color:#4169E1">#4169E1</span> | rgb(65, 105, 225) |
+| <span style="color:#0000FF">Blue</span> | <span style="color:#0000FF">#0000FF</span> | rgb(0, 0, 255) |
+| <span style="color:#0000CD">MediumBlue</span> | <span style="color:#0000CD">#0000CD</span> | rgb(0, 0, 205) |
+| <span style="color:#00008B">DarkBlue</span> | <span style="color:#00008B">#00008B</span> | rgb(0, 0, 139) |
+| <span style="color:#000080">Navy</span> | <span style="color:#000080">#000080</span> | rgb(0, 0, 128) |
+| <span style="color:#191970">MidnightBlue</span> | <span style="color:#191970">#191970</span> | rgb(25, 25, 112) |
+| <span style="color:#483D8B">DarkSlateBlue</span> | <span style="color:#483D8B">#483D8B</span> | rgb(72, 61, 139) |
+| <span style="color:#6A5ACD">SlateBlue</span> | <span style="color:#6A5ACD">#6A5ACD</span> | rgb(106, 90, 205) |
+| <span style="color:#7B68EE">MediumSlateBlue</span> | <span style="color:#7B68EE">#7B68EE</span> | rgb(123, 104, 238) |
+| <span style="color:#8470FF">LightSlateBlue</span> | <span style="color:#8470FF">#8470FF</span> | rgb(132, 112, 255) |
+| <span style="color:#E6E6FA">Lavender</span> | <span style="color:#E6E6FA">#E6E6FA</span> | rgb(230, 230, 250) |
+| <span style="color:#D8BFD8">Thistle</span> | <span style="color:#D8BFD8">#D8BFD8</span> | rgb(216, 191, 216) |
+| <span style="color:#DDA0DD">Plum</span> | <span style="color:#DDA0DD">#DDA0DD</span> | rgb(221, 160, 221) |
+| <span style="color:#EE82EE">Violet</span> | <span style="color:#EE82EE">#EE82EE</span> | rgb(238, 130, 238) |
+| <span style="color:#DA70D6">Orchid</span> | <span style="color:#DA70D6">#DA70D6</span> | rgb(218, 112, 214) |
+| <span style="color:#BA55D3">MediumOrchid</span> | <span style="color:#BA55D3">#BA55D3</span> | rgb(186, 85, 211) |
+| <span style="color:#9370DB">MediumPurple</span> | <span style="color:#9370DB">#9370DB</span> | rgb(147, 112, 219) |
+| <span style="color:#8A2BE2">BlueViolet</span> | <span style="color:#8A2BE2">#8A2BE2</span> | rgb(138, 43, 226) |
+| <span style="color:#9400D3">DarkViolet</span> | <span style="color:#9400D3">#9400D3</span> | rgb(148, 0, 211) |
+| <span style="color:#9932CC">DarkOrchid</span> | <span style="color:#9932CC">#9932CC</span> | rgb(153, 50, 204) |
+| <span style="color:#8B008B">DarkMagenta</span> | <span style="color:#8B008B">#8B008B</span> | rgb(139, 0, 139) |
+| <span style="color:#800080">Purple</span> | <span style="color:#800080">#800080</span> | rgb(128, 0, 128) |
+| <span style="color:#4B0082">Indigo</span> | <span style="color:#4B0082">#4B0082</span> | rgb(75, 0, 130) |
+| <span style="color:#D02090">VioletRed</span> | <span style="color:#D02090">#D02090</span> | rgb(208, 32, 144) |
+| <span style="color:#FFC0CB">Pink</span> | <span style="color:#FFC0CB">#FFC0CB</span> | rgb(255, 192, 203) |
+| <span style="color:#FFB6C1">LightPink</span> | <span style="color:#FFB6C1">#FFB6C1</span> | rgb(255, 182, 193) |
+| <span style="color:#FF69B4">HotPink</span> | <span style="color:#FF69B4">#FF69B4</span> | rgb(255, 105, 180) |
+| <span style="color:#FF1493">DeepPink</span> | <span style="color:#FF1493">#FF1493</span> | rgb(255, 20, 147) |
+| <span style="color:#C71585">MediumVioletRed</span> | <span style="color:#C71585">#C71585</span> | rgb(199, 21, 133) |
+| <span style="color:#DB7093">PaleVioletRed</span> | <span style="color:#DB7093">#DB7093</span> | rgb(219, 112, 147) |
+| <span style="color:#FFE4E1">MistyRose</span> | <span style="color:#FFE4E1">#FFE4E1</span> | rgb(255, 228, 225) |
+| <span style="color:#FFEBCD">BlanchedAlmond</span> | <span style="color:#FFEBCD">#FFEBCD</span> | rgb(255, 235, 205) |
+| <span style="color:#FFE4C4">Bisque</span> | <span style="color:#FFE4C4">#FFE4C4</span> | rgb(255, 228, 196) |
+| <span style="color:#FFDEAD">NavajoWhite</span> | <span style="color:#FFDEAD">#FFDEAD</span> | rgb(255, 222, 173) |
+| <span style="color:#F5DEB3">Wheat</span> | <span style="color:#F5DEB3">#F5DEB3</span> | rgb(245, 222, 179) |
+| <span style="color:#DEB887">BurlyWood</span> | <span style="color:#DEB887">#DEB887</span> | rgb(222, 184, 135) |
+| <span style="color:#D2B48C">Tan</span> | <span style="color:#D2B48C">#D2B48C</span> | rgb(210, 180, 140) |
+| <span style="color:#F4A460">SandyBrown</span> | <span style="color:#F4A460">#F4A460</span> | rgb(244, 164, 96) |
+| <span style="color:#CD853F">Peru</span> | <span style="color:#CD853F">#CD853F</span> | rgb(205, 133, 63) |
+| <span style="color:#BC8F8F">RosyBrown</span> | <span style="color:#BC8F8F">#BC8F8F</span> | rgb(188, 143, 143) |
+| <span style="color:#A0522D">Sienna</span> | <span style="color:#A0522D">#A0522D</span> | rgb(160, 82, 45) |
+| <span style="color:#A52A2A">Brown</span> | <span style="color:#A52A2A">#A52A2A</span> | rgb(165, 42, 42) |
+| <span style="color:#800000">Maroon</span> | <span style="color:#800000">#800000</span> | rgb(128, 0, 0) |
+| <span style="color:#8B4513">SaddleBrown</span> | <span style="color:#8B4513">#8B4513</span> | rgb(139, 69, 19) |
+| <span style="color:#D19275">Feldspar</span> | <span style="color:#D19275">#D19275</span> | rgb(209, 146, 117) |
+| <span style="color:#D2691E">Chocolate</span> | <span style="color:#D2691E">#D2691E</span> | rgb(210, 105, 30) |
+| <span style="color:#FFFFFF">White</span> | <span style="color:#FFFFFF">#FFFFFF</span> | rgb(255, 255, 255) |
+| <span style="color:#FFFAFA">Snow</span> | <span style="color:#FFFAFA">#FFFAFA</span> | rgb(255, 250, 250) |
+| <span style="color:#F0FFF0">HoneyDew</span> | <span style="color:#F0FFF0">#F0FFF0</span> | rgb(240, 255, 240) |
+| <span style="color:#F5FFFA">MintCream</span> | <span style="color:#F5FFFA">#F5FFFA</span> | rgb(245, 255, 250) |
+| <span style="color:#F0FFFF">Azure</span> | <span style="color:#F0FFFF">#F0FFFF</span> | rgb(240, 255, 255) |
+| <span style="color:#F0F8FF">AliceBlue</span> | <span style="color:#F0F8FF">#F0F8FF</span> | rgb(240, 248, 255) |
+| <span style="color:#F8F8FF">GhostWhite</span> | <span style="color:#F8F8FF">#F8F8FF</span> | rgb(248, 248, 255) |
+| <span style="color:#F5F5F5">WhiteSmoke</span> | <span style="color:#F5F5F5">#F5F5F5</span> | rgb(245, 245, 245) |
+| <span style="color:#FFF5EE">Seashell</span> | <span style="color:#FFF5EE">#FFF5EE</span> | rgb(255, 245, 238) |
+| <span style="color:#FFFAF0">FloralWhite</span> | <span style="color:#FFFAF0">#FFFAF0</span> | rgb(255, 250, 240) |
+| <span style="color:#FFFFF0">Ivory</span> | <span style="color:#FFFFF0">#FFFFF0</span> | rgb(255, 255, 240) |
+| <span style="color:#FAEBD7">AntiqueWhite</span> | <span style="color:#FAEBD7">#FAEBD7</span> | rgb(250, 235, 215) |
+| <span style="color:#FAF0E6">Linen</span> | <span style="color:#FAF0E6">#FAF0E6</span> | rgb(250, 240, 230) |
+| <span style="color:#FDF5E6">OldLace</span> | <span style="color:#FDF5E6">#FDF5E6</span> | rgb(253, 245, 230) |
+| <span style="color:#FFF8DC">Cornsilk</span> | <span style="color:#FFF8DC">#FFF8DC</span> | rgb(255, 248, 220) |
+| <span style="color:#F5F5DC">Beige</span> | <span style="color:#F5F5DC">#F5F5DC</span> | rgb(245, 245, 220) |
+| <span style="color:#FAFAD2">LightGoldenRodYellow</span> | <span style="color:#FAFAD2">#FAFAD2</span> | rgb(250, 250, 210) |
+| <span style="color:#FFFFE0">LightYellow</span> | <span style="color:#FFFFE0">#FFFFE0</span> | rgb(255, 255, 224) |
+| <span style="color:#FFFACD">LemonChiffon</span> | <span style="color:#FFFACD">#FFFACD</span> | rgb(255, 250, 205) |
+| <span style="color:#D3D3D3">LightGray</span> | <span style="color:#D3D3D3">#D3D3D3</span> | rgb(211, 211, 211) |
+| <span style="color:#DCDCDC">Gainsboro</span> | <span style="color:#DCDCDC">#DCDCDC</span> | rgb(220, 220, 220) |
+| <span style="color:#C0C0C0">Silver</span> | <span style="color:#C0C0C0">#C0C0C0</span> | rgb(192, 192, 192) |
+| <span style="color:#A9A9A9">DarkGray</span> | <span style="color:#A9A9A9">#A9A9A9</span> | rgb(169, 169, 169) |
+| <span style="color:#808080">Gray</span> | <span style="color:#808080">#808080</span> | rgb(128, 128, 128) |
+| <span style="color:#696969">DimGray</span> | <span style="color:#696969">#696969</span> | rgb(105, 105, 105) |
+| <span style="color:#778899">LightSlateGray</span> | <span style="color:#778899">#778899</span> | rgb(119, 136, 153) |
+| <span style="color:#708090">SlateGray</span> | <span style="color:#708090">#708090</span> | rgb(112, 128, 144) |
+| <span style="color:#2F4F4F">DarkSlateGray</span> | <span style="color:#2F4F4F">#2F4F4F</span> | rgb(47, 79, 79) |
+| <span style="color:#000000">Black</span> | <span style="color:#000000">#000000</span> | rgb(0, 0, 0) |
