@@ -124,6 +124,13 @@
 ### 7.2 自动编号
 ### 7.3 自动生成目录
 ### 7.4 嵌入HTML和其他格式
+
+哪些颜色同时适合做黑色和白色字体的背景？  
+MediumTurquoise	#48D1CC
+DeepSkyBlue	#00BFFF !!!!!!!
+DodgerBlue	#1E90FF ！！！
+LightSalmon	#FFA07A
+
 ### 7.5 多语言支持
 
 ## 8. 编辑器与工具
@@ -141,6 +148,16 @@
 ## 12. 总结
 
 
+<div style="border: 1px solid black; padding: 10px; background-color: #E0FFFF; color: black;">
+    <p>假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。</p>
+    <p>对每个孩子 i，都有一个胃口值 g[i]，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 j，都有一个尺寸 s[j] 。如果 s[j] >= g[i]，我们可以将这个饼干 j 分配给孩子 i ，这个孩子会得到满足。你的目标是尽可能满足越多数量的孩子，并输出这个最大数值。</p>
+    <p>示例 1:</p>
+    <ul>
+        <li>输入: g = [1,2,3], s = [1,1]</li>
+        <li>输出: 1</li>
+        <li>解释: 你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。所以你应该输出1。</li>
+    </ul>
+</div>
 
 
 <table>
@@ -332,7 +349,7 @@ int main(){
 
 <table><tr><td bgcolor=DarkTurquoise>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
 
-<table><tr><td bgcolor=RoyalBlue>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
+<table><tr><td bgcolor=RoyalBlue>自己调试版本1（lambda表达式中参数使用引用）</td></tr></table>
 
 <table><tr><td bgcolor=Yellow><b>自己调试版本（lambda表达式中参数使用引用）</b></td></tr></table>
 
