@@ -33,6 +33,25 @@
 </div>
 
 ### 2.2 段落和换行
+
+<p>
+  你可以使用 <b>加粗</b>、<i>斜体</i>、<u>下划线</u> 和 <strike>删除线</strike> 等样式。
+</p>
+
+<p style="margin-top: 20px;">
+  这个段落顶部有20px的外边距。
+</p>
+
+<p>
+  换行示例：<br>
+  这是第二行。
+</p>
+
+<p style="color: blue; font-size: 16px; text-align: center;">
+  这是一个居中的段落，文本颜色为蓝色，字体大小为16px。
+</p>
+
+
 分割线
 <div style="border: 1px solid black; padding: 10px; background-color: #FFFF00;">
   <p style="color: black; margin: 0; font-weight: bold; line-height: 1.2; font-size: 20px;margin-left: 1px;">
@@ -89,6 +108,8 @@
 
 ### 2.6 分隔线 
 
+<hr style="border-top: 5px solid #DC143C;">
+
 ### 2.7 字体、颜色、大小 
 
 <font face="黑体">黑体字</font>  
@@ -98,6 +119,15 @@
 <font color=#008000>绿色</font>  
 <font color=Red>红色</font>  
 <font size=5>尺寸</font>  
+
+<h1>想要放大的字体</h1>
+<h2>想要放大的字体</h2>
+<h3>想要放大的字 体</h3>
+<h4>想要放大的字体</h4>
+<h5>想要放大的字体</h5>
+
+<h2>用在提问的问题上</h2>
+<h3>用在回答的小标题上</h3>
 
 ## 3. 链接与图片
 ### 3.1 插入链接
@@ -112,6 +142,23 @@
 
 ## 4. 表格
 ### 4.1 创建表格
+
+|  表头  |  表头  |  表头  | 表头   |
+| :----: | :----: | :----: | ------ |
+| 单元格 | 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 | 单元格 |
+
+
+<table>
+  <tr>
+    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
+      <span style="font-weight: bold; font-size: 20px;color: black;">
+      自己答案（去注释，通过！）
+      </span>
+    </td>
+  </tr>
+</table>
+
 ### 4.2 表格对齐和格式化
 ### 4.3 表头和内容单元格
 ### 4.4 表格的合并和拆分
@@ -119,8 +166,20 @@
 ## 5. 代码块与语法高亮
 ### 5.1 插入行内代码
 ### 5.2 插入代码块
+
 #### 5.2.1 语法高亮显示
+
 #### 5.2.2 代码块的行号显示
+
+### 5.3 容器
+<div style="background-color: lightgray; padding: 1px; border: 2px solid black;">
+  <p>这是另外一个带有背景颜色和边框的容器。</p>
+</div>
+
+<div style="background-color: lightgray; padding: 10px; border: 1px solid black;">
+  <h2 style="text-align: left;">标题 2</h2>
+  <p>这是一个带有背景颜色和边框的<div。>容器。</p>
+</div>
 
 ## 6. 扩展语法
 ### 6.1 任务列表
@@ -158,214 +217,7 @@ LightSalmon	#FFA07A
 ## 12. 总结
 
 
-<div style="border: 1px solid black; padding: 10px; background-color: #E0FFFF; color: black;">
-    <p>假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。</p>
-    <p>对每个孩子 i，都有一个胃口值 g[i]，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 j，都有一个尺寸 s[j] 。如果 s[j] >= g[i]，我们可以将这个饼干 j 分配给孩子 i ，这个孩子会得到满足。你的目标是尽可能满足越多数量的孩子，并输出这个最大数值。</p>
-    <p>示例 1:</p>
-    <ul>
-        <li>输入: g = [1,2,3], s = [1,1]</li>
-        <li>输出: 1</li>
-        <li>解释: 你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。所以你应该输出1。</li>
-    </ul>
-</div>
 
-
-<table>
-  <tr>
-    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
-      <span style="font-weight: bold; font-size: 20px; color: black; line-height: 1.2;">
-        <b># 一级标题</b><br/>
-        <b>## 二级标题</b><br/>
-        <b>### 三级标题</b><br/>
-        <b>#### 四级标题</b><br/>
-        <b>##### 五级标题</b><br/>
-        <b>###### 六级标题</b><br/>
-      </span>
-    </td>
-  </tr>
-</table>
-
-
-
-#f8f8f8
-Red #FF0000
-Black #000000
-DodgerBlue	#1E90FF
-SpringGreen	#00FF7F
-Aqua	#00FFFF
-Gold	#FFD700
-Yellow #FFFF00
-
-<table>
-  <tr>
-    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
-      <span style="font-weight: bold; font-size: 20px;color: black;">
-# 一级标题<br/>
-## 二级标题<br/>
-### 三级标题<br/>
-#### 四级标题<br/>
-##### 五级标题<br/>
-###### 六级标题<br/>
-      </span>
-    </td>
-  </tr>
-</table>
-  
-<div style="background-color: Yellow; padding: 10px 0px; border: 1px solid black;">
-  <h2 style="text-align: left; margin: 0; padding: 0;color: black;">自己调试版本（lambda表达式中参数使用引用）</h2>
-</div>
-
-<hr style="border-top: 5px solid #00FA9A;">
-
-<div style="background-color: Yellow; padding: 0px; border: 1px solid black;">
-  <h2 style="text-align: left;color: black;">自己调试版本（lambda表达式中参数使用引用）</h2>
-</div>
-
-<hr style="border-top: 5px solid #DC143C;">
-
-<table>
-  <tr>
-    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
-      <span style="font-weight: bold; font-size: 20px;color: black;">自己调试版本（lambda表达式中参数使用引用）</span>
-    </td>
-  </tr>
-</table>
-
-
-<h1>想要放大的字体</h1>
-<h2>想要放大的字体</h2>
-<h3>想要放大的字 体</h3>
-<h4>想要放大的字体</h4>
-<h5>想要放大的字体</h5>
-
----
-
-<h2>用在提问的问题上</h2>
-
-
-<h3>用在回答的小标题上</h3>
-
-<hr style="border-top: 20px solid #333;">
-
-<font face="黑体">黑体字</font>  
-<font face="微软雅黑">微软雅黑</font>  
-<font face="STCAIYUN">华文彩云</font>  
-<font color=blue>蓝色</font>  
-<font color=#008000>绿色</font>  
-<font color=Red>红色</font>  
-<font size=5>尺寸</font>  
-
-<font face="黑体" color=red size=6>黑体，绿色，尺寸为5（任意内容）</font>
-
-<table><tr><td bgcolor=DarkSeaGreen>这里的背景色是：DarkSeaGreen，此处输入任意想输入的内容</td></tr></table>
-
-<table><tr><td bgcolor=Beige>这里的背景色是：Beige，此处输入任意想输入的内容</td></tr></table>
-
-<table><tr><td bgcolor=DeepPink>这里的背景色是：Beige，此处输入任意想输入的内容</td></tr></table>
-
-MistyRose
-
-<table><tr><td bgcolor=Yellow><b><h3>自己调试版本（lambda表达式中参数使用引用）</h3></b></td></tr></table>
-
-<table>
-  <tr>
-    <td bgcolor="Yellow" style="padding: 5px;">
-      <span style="font-weight: bold; font-size: 22px;">自己调试版本（lambda表达式中参数使用引用）</span>
-    </td>
-  </tr>
-</table>
-
-
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td bgcolor="Yellow" style="padding: 5px; text-align: center;">
-      <span style="font-weight: bold; font-size: 20px;">自己调试版本（lambda表达式中参数使用引用）</span>
-    </td>
-  </tr>
-</table>
-
-<p style="color: blue; font-size: 16px; text-align: center;">
-  这是一个居中的段落，文本颜色为蓝色，字体大小为16px。
-</p>
-
-
-
-
-<div style="background-color: Yellow; padding: 0px; border: 1px solid black;">
-  <h2 style="text-align: left;">自己调试版本（lambda表达式中参数使用引用）</h2>
-</div>
-
-<p>
-  你可以使用 <b>加粗</b>、<i>斜体</i>、<u>下划线</u> 和 <strike>删除线</strike> 等样式。
-</p>
-
-<p style="margin-top: 20px;">
-  这个段落顶部有20px的外边距。
-</p>
-
-<p>
-  换行示例：<br>
-  这是第二行。
-</p>
-
-<div style="background-color: lightgray; padding: 1px; border: 2px solid black;">
-  <p>这是另外一个带有背景颜色和边框的容器。</p>
-</div>
-
-<div style="background-color: lightgray; padding: 10px; border: 1px solid black;">
-  <h2 style="text-align: left;">标题 2</h2>
-  <p>这是一个带有背景颜色和边框的<div。>容器。</p>
-</div>
-
-
-```C++
-#include <iostream>
-
-using namespace std;
-
-int main(){
-    cout << "Hello! " << endl;
-    system("pause");
-}
-
-```
-
-
-<div style="border: 1px solid black; padding: 10px; background-color: #f8f8f8;">
-
-```C++
-#include <iostream>
-
-using namespace std;
-
-int main(){
-    cout << "Hello! " << endl;
-    system("pause");
-}
-
-```
-</div>
-
->自己调试版本（lambda表达式中参数使用引用）
-
->自己调试版本（lambda表达式中参数使用引用）
-
-
-
-
-<table><tr><td bgcolor=Gold>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
-
-<table><tr><td bgcolor=Aqua>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
-
-<table><tr><td bgcolor=DarkTurquoise>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
-
-<table><tr><td bgcolor=RoyalBlue>自己调试版本1（lambda表达式中参数使用引用）</td></tr></table>
-
-<table><tr><td bgcolor=Yellow><b>自己调试版本（lambda表达式中参数使用引用）</b></td></tr></table>
-
-<table><tr><td bgcolor=Silver>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
-
-<table><tr><td bgcolor=SkyBlue>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
 
 
 

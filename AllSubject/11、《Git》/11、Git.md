@@ -3,10 +3,7 @@
 <details>
 <summary>目录</summary>
 
-<ul>
-  <li>
-    <details>
-      <summary>1. 基础操作</summary>
+1. 基础操作</summary>
       <ul>
         <li>
           <details>

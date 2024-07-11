@@ -1,4 +1,20 @@
 {
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.revealjsTheme": "white.css",
+  "markdown-preview-enhanced.usePandocParser": false,
+  "markdown-preview-enhanced.mermaidTheme": "default",
+  "markdown-preview-enhanced.scrollSync": true,
+  "markdown-preview-enhanced.mathRenderingOption": "KaTeX",
+  "markdown-preview-enhanced.previewColumn": "one",
+  "markdown-preview-enhanced.enableHTML5Embed": true,
+  "markdown-preview-enhanced.HTML5Embed.useImageSyntax": true,
+  "markdown-preview-enhanced.HTML5Embed.useLinkSyntax": true,
+  "markdown.extension.toc.updateOnSave": true,
+  "markdown.extension.toc.depthFrom": 1,
+  "markdown.extension.toc.depthTo": 4,
+  "markdown.extension.toc.unorderedList.marker": "*",
+  "markdown.extension.toc.downcaseLink": true,
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
@@ -55,10 +71,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "markdown.extension.toc.updateOnSave": true,
-  "markdown.extension.toc.depthFrom": 2,
-  "markdown.extension.toc.depthTo": 4,
-  "markdown.extension.toc.unorderedList.marker": "*",
-  "markdown.extension.toc.downcaseLink": true
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
