@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20、验证二叉搜索树（2024071，98题，中等，27min）.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<ul>
+<li><a href="#20%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91202407198%E9%A2%98%E4%B8%AD%E7%AD%8927min">20、验证二叉搜索树（2024071，98题，中等，27min）</a></li>
+</ul>
+<h3 id="20%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91202407198%E9%A2%98%E4%B8%AD%E7%AD%8927min">20、验证二叉搜索树（2024071，98题，中等，27min）</h3>
+<div style="border: 1px solid black; padding: 10px; background-color: #00BFFF;">
+<p>给你一个二叉树的根节点 root ，判断其是否是一个有效的二叉搜索树。</p>
+<p>有效 二叉搜索树定义如下：</p>
+<ul>
+<li>节点的左子树只包含 小于 当前节点的数。</li>
+<li>节点的右子树只包含 大于 当前节点的数。</li>
+<li>所有左子树和右子树自身必须也是二叉搜索树。</li>
+</ul>
+<p>示例 1：
+<img src="image/d7c7473aa0838650889257f03ff1c39.png" alt="alt text"></p>
+<ul>
+<li>输入：root = [2,1,3]</li>
+<li>输出：true</li>
+</ul>
+<p>示例 2：
+<img src="image/2b5894fc08a2d0fe20e7fefad9736ee.png" alt="alt text"></p>
+<ul>
+<li>输入：root = [5,1,4,null,null,3,6]</li>
+<li>输出：false</li>
+<li>解释：根节点的值是 5 ，但是右子节点的值是 4 。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>
+<p>树中节点数目范围在[1, 104] 内</p>
+</li>
+<li>
+<p>-231 &lt;= Node.val &lt;= 231 - 1</p>
+</p>
+</li>
+</ul>
+</div>
+<hr style="border-top: 5px solid #DC143C;">
+<table>
+  <tr>
+    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
+      <span style="font-weight: bold; font-size: 20px;color: black;">
+      自己答案（递归法，通过！27min）
+      </span>
+    </td>
+  </tr>
+</table>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+先得到中序遍历结果，再遍历判断是否为升序
+*/</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> {</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">checkBST</span><span class="hljs-params">(TreeNode* cur_node, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; path)</span></span>{
+        <span class="hljs-keyword">if</span>(cur_node == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span>;
+
+
+        checkBST(cur_node-&gt;left, path);
+        path.push_back(cur_node-&gt;val);
+        checkBST(cur_node-&gt;right, path);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isValidBST</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; vec;
+
+        checkBST(root, vec);
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; vec.<span class="hljs-built_in">size</span>(); i++){
+            <span class="hljs-keyword">if</span>(vec[i] &lt;= vec[i<span class="hljs-number">-1</span>]){
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+};
+</div></code></pre>
+<p><img src="image/584cd8acb2cc06485f3e55e6e563f73.png" alt="alt text"></p>
+<hr style="border-top: 5px solid #DC143C;">
+<table>
+  <tr>
+    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
+      <span style="font-weight: bold; font-size: 20px;color: black;">
+      仿答案（在递归中检查是否为二叉搜索树V1）
+      </span>
+    </td>
+  </tr>
+</table>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+递归方法，在递归中检查是否为二叉搜索树
+采用中序遍历，递归函数返回当前节点的左右子树的返回的bool值
+额外的，需要记录当前的最大值cur_max_val，因为中序遍历二叉搜索树，
+    cur_max_val应该是升序的，若遇到小于等于，说明不是有效的二叉搜索树！返回false
+递归函数返回左右子树的与结果；所以有一个子树为false，最终结果为false！
+*/</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> {</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> cur_max_val = LONG_MIN;  <span class="hljs-comment">// 查一下还有哪些类似的宏定义！！！</span>
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isValidBST</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+        <span class="hljs-keyword">if</span>(root == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+
+        <span class="hljs-keyword">bool</span> left = isValidBST(root-&gt;left);
+        <span class="hljs-keyword">if</span>(cur_max_val &lt; root-&gt;val){
+            cur_max_val = root-&gt;val;
+        }<span class="hljs-keyword">else</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+        <span class="hljs-keyword">bool</span> right = isValidBST(root-&gt;right);
+
+        <span class="hljs-keyword">return</span> left &amp;&amp; right;
+    }
+};
+</div></code></pre>
+<p><img src="image/17b857805efdd11e1f9364d28aedef1.png" alt="alt text"></p>
+<hr style="border-top: 5px solid #DC143C;">
+<table>
+  <tr>
+    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
+      <span style="font-weight: bold; font-size: 20px;color: black;">
+      仿答案（在递归中检查是否为二叉搜索树V2）
+      </span>
+    </td>
+  </tr>
+</table>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+递归方法，在递归中检查是否为二叉搜索树
+不使用最小的long long作为最初的比较值，而是用一个变量记录第一个节点！！！
+采用中序遍历，递归函数返回当前节点的左右子树的返回的bool值
+额外的，需要记录当前的最大值cur_max_val对应的节点TreeNode* pre，因为中序遍历二叉搜索树，
+    pre的val应该是升序的，若遇到小于等于，说明不是有效的二叉搜索树！返回false
+递归函数返回左右子树的与结果；所以有一个子树为false，最终结果为false！
+*/</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> {</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">// long long cur_max_val = LONG_MIN;  </span>
+    TreeNode* pre = <span class="hljs-literal">nullptr</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isValidBST</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+        <span class="hljs-keyword">if</span>(root == <span class="hljs-literal">nullptr</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+
+        <span class="hljs-keyword">bool</span> left = isValidBST(root-&gt;left);
+        <span class="hljs-keyword">if</span>(pre == <span class="hljs-literal">nullptr</span>){
+            pre = root;
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(pre-&gt;val &lt; root-&gt;val){
+            pre = root;
+        }<span class="hljs-keyword">else</span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+        <span class="hljs-keyword">bool</span> right = isValidBST(root-&gt;right);
+
+        <span class="hljs-keyword">return</span> left &amp;&amp; right;
+    }
+};
+
+<span class="hljs-comment">/*随想录写法！！！
+由于中序遍历，所以必然是按照从小到大的顺序遍历的
+    若中间相邻的val不是递增的，则说明不是有效的二叉搜索树。
+    所以可以每遍历一个节点，更新依次pre即可！！！
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> {</span>
+<span class="hljs-keyword">public</span>:
+    TreeNode* pre = <span class="hljs-literal">NULL</span>; <span class="hljs-comment">// 用来记录前一个节点</span>
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isValidBST</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-literal">NULL</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">bool</span> left = isValidBST(root-&gt;left);
+
+        <span class="hljs-keyword">if</span> (pre != <span class="hljs-literal">NULL</span> &amp;&amp; pre-&gt;val &gt;= root-&gt;val) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        pre = root; <span class="hljs-comment">// 记录前一个节点</span>
+
+        <span class="hljs-keyword">bool</span> right = isValidBST(root-&gt;right);
+        <span class="hljs-keyword">return</span> left &amp;&amp; right;
+    }
+};
+</div></code></pre>
+<p><img src="image/8536ef646d7ed2b48e4927b544edc28.png" alt="alt text"></p>
+<hr style="border-top: 5px solid #DC143C;">
+<table>
+  <tr>
+    <td bgcolor="Yellow" style="padding: 5px; border: 0px solid black;">
+      <span style="font-weight: bold; font-size: 20px;color: black;">
+      仿答案（迭代法）
+      </span>
+    </td>
+  </tr>
+</table>
+<pre class="hljs"><code><div><span class="hljs-comment">/*
+迭代方法
+使用栈记录中序遍历入栈的节点
+先入栈节点，有左节点则继续入栈，直到找到最左节点
+    出栈最左节点，也是中节点；判断是否大于上个节点，不是返回false
+    处理当前节点cur_node后，可能其有右节点，所以将当前节点指向右节点cur_node = cur_node-&gt;right！
+        此时的右节点在下一轮被看做根节点，重复找最左节点的步骤；
+        由此实现了左中右的遍历顺序！！！
+*/</span>
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> {</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">stack</span>&lt;TreeNode*&gt; stk;
+
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isValidBST</span><span class="hljs-params">(TreeNode* root)</span> </span>{
+
+        TreeNode* cur_node = root;
+        TreeNode* pre = <span class="hljs-literal">nullptr</span>;
+        <span class="hljs-comment">// stk.push(cur_node);</span>
+
+        <span class="hljs-keyword">while</span>(cur_node != <span class="hljs-literal">nullptr</span> || !stk.empty()){
+            <span class="hljs-keyword">if</span>(cur_node != <span class="hljs-literal">nullptr</span>){   <span class="hljs-comment">// 连续将节点入栈，有左节点，则继续入栈。达到连续将左节点入栈效果</span>
+                <span class="hljs-comment">// stk.push(cur_node-&gt;left);</span>
+                stk.push(cur_node);       <span class="hljs-comment">// 左</span>
+                cur_node = cur_node-&gt;left;
+            }<span class="hljs-keyword">else</span>{   <span class="hljs-comment">// 找到最左节点</span>
+                cur_node = stk.top();     <span class="hljs-comment">// 中（其实也是当前的最左节点）</span>
+                stk.pop();
+                
+                <span class="hljs-keyword">if</span>(pre != <span class="hljs-literal">nullptr</span> &amp;&amp; pre-&gt;val &gt;= cur_node-&gt;val) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+                pre = cur_node;
+
+                cur_node = cur_node-&gt;right;  <span class="hljs-comment">// 右（前面处理了左中节点，若其有右节点，现在则处理，但其实也是现将其看做根节点，然后找其最左节点！！！）</span>
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+};
+</div></code></pre>
+<p><img src="image/ba2cd0e1311d02f5dd1c8f8e5f5dbd8.png" alt="alt text"></p>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+    "root": {
+        "data": {
+            "id": "d2t690k7h5k0",
+            "created": 1721357338731,
+            "text": "MainTopic"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d2t69kmalbk0",
+                    "created": 1721357382393,
+                    "text": "topic",
+                    "resource": [
+                        "shenzi"
+                    ]
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d2t69rwi1sg0",
+                    "created": 1721357398248,
+                    "text": "topic",
+                    "resource": [
+                        "shenzi"
+                    ]
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d2t69mkgwbk0",
+                    "created": 1721357386636,
+                    "text": "topic"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

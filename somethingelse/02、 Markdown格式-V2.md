@@ -330,8 +330,54 @@ int main(){
 
 ```
 
+SaddleBrown ！！！
+#006400
+ADFF2F
+778899
+FF8C00
+4B0082  
+000080  ！！！
+8B4513
+CD5C5C
+2E8B57
+DodgerBlue !!!
+DarkSlateGray !!!
 
-<div style="border: 1px solid black; padding: 10px; background-color: #f8f8f8;">
+<div style="border: 1px solid black; padding: 10px; background-color: #2E8B57;">
+
+给你一个二叉树的根节点 root ，判断其是否是一个有效的二叉搜索树。
+
+有效 二叉搜索树定义如下：
+
+- 节点的左子树只包含 小于 当前节点的数。
+- 节点的右子树只包含 大于 当前节点的数。
+- 所有左子树和右子树自身必须也是二叉搜索树。
+ 
+
+示例 1：  
+![alt text](image/d7c7473aa0838650889257f03ff1c39.png)
+
+- 输入：root = [2,1,3]
+- 输出：true
+
+示例 2：  
+![alt text](image/2b5894fc08a2d0fe20e7fefad9736ee.png)
+
+- 输入：root = [5,1,4,null,null,3,6]
+- 输出：false
+- 解释：根节点的值是 5 ，但是右子节点的值是 4 。
+ 
+
+提示：
+
+- 树中节点数目范围在[1, 104] 内
+- -231 <= Node.val <= 231 - 1
+
+  </p>
+</div>
+
+
+<div style="border: 1px solid black; padding: 10px; background-color: #006400;">
 
 ```C++
 #include <iostream>
@@ -363,13 +409,79 @@ int main(){
 
 <table><tr><td bgcolor=Yellow><b>自己调试版本（lambda表达式中参数使用引用）</b></td></tr></table>
 
-<table><tr><td bgcolor=Silver>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
+<table><tr><td bgcolor=Silver>给出你推荐的颜色</td></tr></table>
 
 <table><tr><td bgcolor=SkyBlue>自己调试版本（lambda表达式中参数使用引用）</td></tr></table>
 
 
 
 <h3>在Markdown中，可以使用LaTeX语法来编写公式和数学表达式。以下是一些常见的格式和例子：</h3>
+
+<table><tr><td bgcolor=LightGray>LightGray</td></tr></table>
+<table><tr><td bgcolor=Gray>Gray</td></tr></table>
+<table><tr><td bgcolor=DimGray>DimGray</td></tr></table>
+<table><tr><td bgcolor=SlateGray>SlateGray</td></tr></table>
+<table><tr><td bgcolor=DarkSlateGray>DarkSlateGray</td></tr></table>
+<table><tr><td bgcolor=DarkGray>DarkGray</td></tr></table>
+<table><tr><td bgcolor=Gainsboro>Gainsboro</td></tr></table>
+<table><tr><td bgcolor=WhiteSmoke>WhiteSmoke</td></tr></table>
+<table><tr><td bgcolor=LightSlateGray>LightSlateGray</td></tr></table>
+<table><tr><td bgcolor=DarkSlateBlue>DarkSlateBlue</td></tr></table>
+<table><tr><td bgcolor=RoyalBlue>RoyalBlue</td></tr></table>
+<table><tr><td bgcolor=LightSteelBlue>LightSteelBlue</td></tr></table>
+<table><tr><td bgcolor=CadetBlue>CadetBlue</td></tr></table>
+<table><tr><td bgcolor=DarkSeaGreen>DarkSeaGreen</td></tr></table>
+<table><tr><td bgcolor=MediumAquamarine>MediumAquamarine</td></tr></table>
+<table><tr><td bgcolor=DarkKhaki>DarkKhaki</td></tr></table>
+<table><tr><td bgcolor=Tan>Tan</td></tr></table>
+<table><tr><td bgcolor=BurlyWood>BurlyWood</td></tr></table>
+<table><tr><td bgcolor=RosyBrown>RosyBrown</td></tr></table>
+<table><tr><td bgcolor=MistyRose>MistyRose</td></tr></table>
+
+
+<table><tr><td bgcolor=LightGray>这是使用 LightGray 背景色的文本。这个颜色较浅，适合在黑色主题下使用，提供良好的可读性。</td></tr></table>
+<table><tr><td bgcolor=Gray>这是使用 Gray 背景色的文本。这个颜色中等，不会太刺眼，非常适合阅读。</td></tr></table>
+<table><tr><td bgcolor=DimGray>这是使用 DimGray 背景色的文本。这个颜色更深一些，但依然保留了很好的可读性。</td></tr></table>
+<table><tr><td bgcolor=SlateGray>这是使用 SlateGray 背景色的文本。它给人一种冷静和稳重的感觉，适合正式的文档。</td></tr></table>
+<table><tr><td bgcolor=DarkSlateGray>这是使用 DarkSlateGray 背景色的文本。深色调让它在黑色主题下显得非常高端。</td></tr></table>
+<table><tr><td bgcolor=DarkGray>这是使用 DarkGray 背景色的文本。这个颜色深而不失优雅，适合多种用途。</td></tr></table>
+<table><tr><td bgcolor=Gainsboro>这是使用 Gainsboro 背景色的文本。它是一个非常浅的颜色，可以营造出轻松的阅读体验。</td></tr></table>
+<table><tr><td bgcolor=WhiteSmoke>这是使用 WhiteSmoke 背景色的文本。此颜色非常柔和，适合长时间阅读。</td></tr></table>
+<table><tr><td bgcolor=LightSlateGray>这是使用 LightSlateGray 背景色的文本。它带有轻微的蓝色调，看起来很清新。</td></tr></table>
+<table><tr><td bgcolor=DarkSlateBlue>这是使用 DarkSlateBlue 背景色的文本。这个颜色独特，适合需要一些创意的文档。</td></tr></table>
+<table><tr><td bgcolor=RoyalBlue>这是使用 RoyalBlue 背景色的文本。鲜艳的蓝色非常引人注目，适合突出重点。</td></tr></table>
+<table><tr><td bgcolor=LightSteelBlue>这是使用 LightSteelBlue 背景色的文本。这个颜色清新而现代，非常适合科技主题的内容。</td></tr></table>
+<table><tr><td bgcolor=CadetBlue>这是使用 CadetBlue 背景色的文本。带有绿蓝色调，给人一种安静的感觉，适合正式场合。</td></tr></table>
+<table><tr><td bgcolor=DarkSeaGreen>这是使用 DarkSeaGreen 背景色的文本。这个颜色自然舒适，非常适合自然主题的内容。</td></tr></table>
+<table><tr><td bgcolor=MediumAquamarine>这是使用 MediumAquamarine 背景色的文本。这个颜色明亮而生动，适合传达活力。</td></tr></table>
+<table><tr><td bgcolor=DarkKhaki>这是使用 DarkKhaki 背景色的文本。它是一个温暖的颜色，非常适合柔和的主题。</td></tr></table>
+<table><tr><td bgcolor=Tan>这是使用 Tan 背景色的文本。这个颜色温暖而平静，适合家庭或个人内容。</td></tr></table>
+<table><tr><td bgcolor=BurlyWood>这是使用 BurlyWood 背景色的文本。这个颜色自然且质朴，适合传达舒适的感觉。</td></tr></table>
+<table><tr><td bgcolor=RosyBrown>这是使用 RosyBrown 背景色的文本。这个颜色柔和而温暖，适合带有感情色彩的内容。</td></tr></table>
+<table><tr><td bgcolor=MistyRose>这是使用 MistyRose 背景色的文本。这个颜色非常柔和，给人一种轻松愉悦的感觉，适合温馨的主题。</td></tr></table>
+
+
+<table><tr><td bgcolor=LightGray>这是一个测试文本，背景颜色是LightGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=Gray>这是一个测试文本，背景颜色是Gray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DimGray>这是一个测试文本，背景颜色是DimGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=SlateGray>这是一个测试文本，背景颜色是SlateGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DarkSlateGray>这是一个测试文本，背景颜色是DarkSlateGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DarkGray>这是一个测试文本，背景颜色是DarkGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=Gainsboro>这是一个测试文本，背景颜色是Gainsboro。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=WhiteSmoke>这是一个测试文本，背景颜色是WhiteSmoke。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=LightSlateGray>这是一个测试文本，背景颜色是LightSlateGray。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DarkSlateBlue>这是一个测试文本，背景颜色是DarkSlateBlue。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=RoyalBlue>这是一个测试文本，背景颜色是RoyalBlue。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=LightSteelBlue>这是一个测试文本，背景颜色是LightSteelBlue。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=CadetBlue>这是一个测试文本，背景颜色是CadetBlue。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DarkSeaGreen>这是一个测试文本，背景颜色是DarkSeaGreen。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=MediumAquamarine>这是一个测试文本，背景颜色是MediumAquamarine。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=DarkKhaki>这是一个测试文本，背景颜色是DarkKhaki。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=Tan>这是一个测试文本，背景颜色是Tan。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=BurlyWood>这是一个测试文本，背景颜色是BurlyWood。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=RosyBrown>这是一个测试文本，背景颜色是RosyBrown。请查看效果是否符合你的预期。</td></tr></table>
+<table><tr><td bgcolor=MistyRose>这是一个测试文本，背景颜色是MistyRose。请查看效果是否符合你的预期。</td></tr></table>
+
 
 ### 内联公式
 
@@ -777,3 +889,197 @@ $$
 | <span style="color:#708090">SlateGray</span> | <span style="color:#708090">#708090</span> | rgb(112, 128, 144) |
 | <span style="color:#2F4F4F">DarkSlateGray</span> | <span style="color:#2F4F4F">#2F4F4F</span> | rgb(47, 79, 79) |
 | <span style="color:#000000">Black</span> | <span style="color:#000000">#000000</span> | rgb(0, 0, 0) |
+
+
+<table>
+  <tr><td bgcolor=#D2691E>
+这个段落的背景颜色是Chocolate，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=SaddleBrown>
+这个段落的背景颜色是SaddleBrown，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#2F4F4F>
+这个段落的背景颜色是DarkSlateGray，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#4169E1>
+这个段落的背景颜色是RoyalBlue，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#B22222>
+这个段落的背景颜色是FireBrick，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+
+<table>
+  <tr><td bgcolor=#CD5C5C>
+这个段落的背景颜色是IndianRed，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#B8860B>
+这个段落的背景颜色是DarkGoldenRod，看起来非常有质感。<br>
+长句子的使用可以使测试文本看起来更加真实。<br>
+在Markdown文档中设置背景颜色是一项有用的技巧。<br>
+确保颜色对比度足够高以提高可读性是很重要的。<br>
+不同的颜色可以传达不同的情感和信息。<br>
+这是一个展示不同背景颜色的测试段落。<br>
+希望这些示例能帮助你做出最佳选择。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#2E8B57>
+这个段落的背景颜色是SeaGreen，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#228B22>
+这个段落的背景颜色是ForestGreen，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#008000>
+这个段落的背景颜色是Green，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#006400>
+这个段落的背景颜色是DarkGreen，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#6B8E23>
+这个段落的背景颜色是OliveDrab，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#4682B4>
+这个段落的背景颜色是SteelBlue，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#483D8B>
+这个段落的背景颜色是DarkSlateBlue，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#000000>
+这个段落的背景颜色是Black，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
+
+<table>
+  <tr><td bgcolor=#DB7093>
+这个段落的背景颜色是PaleVioletRed，非常适合在黑色主题中使用。<br>
+长句子可以帮助我们更好地测试背景颜色的视觉效果。<br>
+Markdown文档中的颜色设置对于提高阅读体验至关重要。<br>
+选择合适的背景颜色可以使文本更加清晰易读。<br>
+请注意不同颜色在不同设备上的显示效果可能会有所不同。<br>
+这是一个测试文本，旨在展示背景颜色的效果。<br>
+希望这些颜色能帮助你找到最适合的选项。<br>
+</td></tr>
+</table>
