@@ -318,7 +318,7 @@ MistyRose
 </div>
 
 
-```C++
+```C++ {.line-numbers}
 #include <iostream>
 
 using namespace std;
@@ -379,7 +379,7 @@ DarkSlateGray !!!
 
 <div style="border: 1px solid black; padding: 10px; background-color: #006400;">
 
-```C++
+```C++ {.line-numbers}
 #include <iostream>
 
 using namespace std;
