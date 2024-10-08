@@ -1,2 +1,3 @@
-# Study
-This will contain some of what I want to learn
+## 01、数组中的第K个最大元素（20240925，215题，中等，18min）
+    1，涉及了while和do-while，这题中使用do-while更简洁；细节很多，常回顾！
+    2，基于堆排序的选择方法再仔细理解，学习下。
