@@ -1,9 +1,12 @@
 # Top200
 This will contain some of what I want to learn
 
+gci -Recurse -Filter *2024*.md | Select-Object FullName
+
 ##  1. 2024.09
 
-  
+gci -Recurse -Filter *2409*.md | Select-Object FullName
+
 1. 01、无重复字符的最长子串（20240911，3题，中等） DoublePoint 
 
 2. 01、最长回文子串（20240912，5题，中等。28min） DynamicProgramming
@@ -26,15 +29,27 @@ This will contain some of what I want to learn
 
 ##  2. 2024.10
 
-1. 02、旋转图像（20241005，48题，中等）01_Arrays
+gci -Recurse -Filter *2410*.md | Select-Object FullName
 
+1. 01、括号生成（20241002，22题，中等） 08_BackTracking
+   
 2. 02、和为 K 的子数组（20241004，560题，中等） 03_HashTable
 
-3. 01、括号生成（20241002，22题，中等） 08_BackTracking
+3. 02、旋转图像（20241005，48题，中等）  01_Arrays
 
+4. 02、整数反转（20241009，7题，中等）  04_String
 
+5. 03、字符串相乘（20241009，43题，中等）  04_String  官方答案待补充！
 
+6. 02、在排序数组中查找元素的第一个和最后一个位置（20241009，34题，中等。50min）  13_Sorting  官方答案待补充！
 
+7. 03、删除有序数组中的重复项 II（20241010，80题，中等。15min） 05_DoublePoint
+
+8. 03、反转链表 II（20241010，92题，中等。25min） 02_List 官方答案待补充！
+
+9. 01、字符串解码（20241015，394题，中等）  06_StackAndQueue  还有第二种解法！
+
+10. 03、排序数组（20241015，912题，中等，45min）  13_Sorting
 
 
 
