@@ -88,3 +88,209 @@ gci -Recurse -Filter *2410*.md | Select-Object FullName
 ![alt text](200image/712e5db3b10ba572515d7ee474c41d3f.jpg)
 ![alt text](200image/9f3674897332304da0a7e6a29c183c0a.jpg)
 ![alt text](200image/a81ef80498ed328981ddf32b4aabdd64.jpg)
+以下是对这个问题的分析和解决方法：
+
+
+**一、错误分析**：
+- **文件或目录不存在**：
+    - 错误信息 `cc1plus.exe: fatal error: D:\BaiduSyncdisk/2-面试搜集信息: No such file or directory` 表明编译器在编译过程中试图访问一个不存在的文件或目录。这可能是由于包含目录路径错误或者文件确实不存在。
+    - 从编译器命令 `C:/MinGW/bin/g++ -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wcast-align -Wconversion -Wsign-conversion -Wnull-dereference --std=gnu++14 -g3 -O0 -ID:\BaiduSyncdisk/** -c d:\BaiduSyncdisk\Study_github\Study\test_code\test0108.cpp -o.\build\Debug\test0108.o` 来看，可能是 `-ID:\BaiduSyncdisk/**` 这个包含目录的设置有问题，其中的 `**` 通配符可能导致编译器尝试访问一个不存在的子目录或文件。
+
+
+**二、解决方法**：
+
+**1. 检查包含目录**：
+- **情况一：错误的通配符使用**：
+    - 如果你不需要 `-ID:\BaiduSyncdisk/**` 这个包含目录，可以直接从编译器命令中删除它，因为它可能是多余的，或者错误地添加了通配符。
+    - 修改 `tasks.json` 中的 `args` 部分，删除 `-ID:\BaiduSyncdisk/**`：
+        ```json
+        {
+            "version": "2.0.0",
+            "tasks": [
+                {
+                    "label": "C/C++: g++.exe build active file",
+                    "type": "shell",
+                    "command": "g++",
+                    "args": [
+                        "-Wall",
+                        "-Wextra",
+                        "-Wpedantic",
+                        "-Wshadow",
+                        "-Wformat=2",
+                        "-Wcast-align",
+                        "-Wconversion",
+                        "-Wsign-conversion",
+                        "-Wnull-dereference",
+                        "--std=gnu++14",
+                        "-g3",
+                        "-O0",
+                        "-c",
+                        "${file}",
+                        "-o",
+                        "${fileDirname}/build/Debug/${fileBasenameNoExtension}.o",
+                        "&&",
+                        "C:/MinGW/bin/g++",
+                        "-Wall",
+                        "-Wextra",
+                        "-Wpedantic",
+                        "-Wshadow",
+                        "-Wformat=2",
+                        "-Wcast-align",
+                        "-Wconversion",
+                        "-Wsign-conversion",
+                        "-Wnull-dereference",
+                        "--std=gnu++14",
+                        "-g3",
+                        "-O0",
+                        "${fileDirname}/build/Debug/${fileBasenameNoExtension}.o",
+                        "-o",
+                        "${fileDirname}/build/Debug/outDebug.exe"
+                    ],
+                    "options": {
+                        "cwd": "${workspaceFolder}"
+                    },
+                    "problemMatcher": [
+                        "$gcc"
+                    ],
+                    "group": "build",
+                    "detail": "编译器: g++"
+                }
+            ]
+        }
+        ```
+
+
+**2. 确认文件和目录存在**：
+- **情况二：检查文件路径**：
+    - 确保 `D:\BaiduSyncdisk\Study_github\Study\test_code\test0108.cpp` 这个文件确实存在，并且有足够的权限访问它。
+    - 如果你有自定义的头文件在 `D:\BaiduSyncdisk` 或其子目录中，确保路径正确，避免使用通配符，除非你确实知道你在做什么。
+
+
+**3. 检查工作区和项目结构**：
+- 确认你的项目结构和文件系统布局与编译器命令中的路径匹配，特别是涉及到的包含目录和源文件路径。
+
+
+**三、修改后代码示例（tasks.json）**：
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++.exe build active file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-Wshadow",
+                "-Wformat=2",
+                "-Wcast-align",
+                "-Wconversion",
+                "-Wsign-conversion",
+                "-Wnull-dereference",
+                "--std=gnu++14",
+                "-g3",
+                "-O0",
+                "-c",
+                "${file}",
+                "-o",
+                "${fileDirname}/build/Debug/${fileBasenameNoExtension}.o",
+                "&&",
+                "C:/MinGW/bin/g++",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-Wshadow",
+                "-Wformat=2",
+                "-Wcast-align",
+                "-Wconversion",
+                "-Wsign-conversion",
+                "--std=gnu++14",
+                "-g3",
+                "-O0",
+                "${fileDirname}/build/Debug/${fileBasenameNoExtension}.o",
+                "-o",
+                "${fileDirname}/build/Debug/outDebug.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "编译器: g++"
+        }
+        ]
+}
+```
+
+
+**四、代码解释**：
+- 上述 `tasks.json` 中的 `args` 数组包含了编译器 `g++` 的一系列参数：
+    - `-Wall`, `-Wextra`, `-Wpedantic` 等是警告选项，用于开启各种编译警告。
+    - `--std=gnu++14` 表示使用 C++14 标准，并且启用 GNU 扩展。
+    - `-g3` 表示生成调试信息，`-O0` 表示不进行优化。
+    - `-c` 表示只编译不链接，生成 `.o` 对象文件。
+    - `${file}` 是一个 VSCode 变量，会被替换为当前活动文件的路径。
+    - `${fileDirname}/build/Debug/${fileBasenameNoExtension}.o` 表示输出对象文件的路径。
+    - `&&` 用于将两个 `g++` 命令连接起来，第一个命令编译源文件生成对象文件，第二个命令将对象文件链接成可执行文件。
+
+
+**五、注意事项**：
+- 确保文件和目录的路径正确，避免使用不必要的通配符或错误的路径。
+- 检查 `tasks.json` 中的其他配置项，确保它们与你的项目需求和文件结构匹配。
+- 如果你需要添加包含目录，使用 `-I` 选项时，要确保路径准确，例如 `-ID:\BaiduSyncdisk\include` ，而不是 `-ID:\BaiduSyncdisk/**` 。
+
+
+通过上述修改和检查，你可以解决编译时的文件或目录不存在的问题，确保编译器能够正确找到源文件和包含目录，完成编译和链接过程。{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",  // 增加此选项
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 生成活动文件",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",  // 增加此选项
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
